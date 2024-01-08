@@ -28,3 +28,8 @@ in vederea compararii rezultatelor cu cele de la competitia recent incheiata.
 - Constientizarea problemelor existente in ceea ce priveste rularea pe sistemul de operare ***Windows*** (out of memory). 
   In consecinta, ne-am reorientat catre sistemul de operare ***Linux*** unde toate aspectele au functionat corespunzator.
 - Realizarea draft-ului
+
+**Saptamana 13 & 14**
+
+- Esuarea instalarii tool-urilor Marabou, PyRaT
+- Instalarea si testarea tool-ului [Neuralsat](https://github.com/dynaroars/neuralsat)
