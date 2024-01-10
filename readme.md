@@ -2,7 +2,7 @@
 
 **Benchmark:** traffic_signs_recognition
 
-**Tools:** alpha_beta_crown & marabou
+**Tools:** alpha_beta_crown & ~~marabou~~ neuralsat
 
 **Saptamana 9**
 
