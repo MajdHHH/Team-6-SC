@@ -1,0 +1,2746 @@
+Instance,Result
+onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
+  (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__189:0): Transpose()
+  (Conv_sequential_10/quant_conv2d_21/QuantConv2D:0): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__191:0): Transpose()
+  (Reshape_sequential_10/flatten_10/Reshape:0): Flatten()
+  (Add_sequential_10/quant_dense_10/ste_sign_54/add:0): Add()
+  (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
+  (Softmax_activation_10): Identity()
+)
+INFO     17:24:04     [!] VNNLIB: 2700 inputs, 43 outputs
+INFO     17:24:05     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
+INFO     17:24:05     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:24:05     [Failed] RandomAttack(seed=332, device=cpu)
+INFO     17:24:06     [Success] PGDAttack(seed=254, device=cpu)
+INFO     17:24:06     [!] Iterations: 0
+INFO     17:24:06     adv (first 5): tensor([254.8780, 249.4422, 246.9960, 249.0272, 240.2150], dtype=torch.float64)
+DEBUG    17:24:06     output: tensor([ 496., 1350., 1536., 1514., 1292., 1454.,  690., 1088., 1214.,  124.,
+         870.,  932.,  228., -192.,  342., 1364.,  606.,  430.,  650.,  644.,
+         540.,  832.,  314.,  688.,  952.,  576.,  584.,  236., 1060.,  138.,
+         620.,  506.,  712.,  642.,  -64.,  574.,  -74., -564.,  300.,  382.,
+         458.,  538.,  612.], dtype=torch.float64)
+INFO     17:24:06     [!] Result: sat
+INFO     17:24:06     [!] Runtime: 2.2197
+sat,2.2197
+
+onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
+  (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__189:0): Transpose()
+  (Conv_sequential_10/quant_conv2d_21/QuantConv2D:0): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__191:0): Transpose()
+  (Reshape_sequential_10/flatten_10/Reshape:0): Flatten()
+  (Add_sequential_10/quant_dense_10/ste_sign_54/add:0): Add()
+  (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
+  (Softmax_activation_10): Identity()
+)
+INFO     17:24:21     [!] VNNLIB: 2700 inputs, 43 outputs
+INFO     17:24:22     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
+INFO     17:24:22     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:24:22     [Failed] RandomAttack(seed=465, device=cpu)
+INFO     17:24:23     [Success] PGDAttack(seed=196, device=cpu)
+INFO     17:24:23     [!] Iterations: 0
+INFO     17:24:23     adv (first 5): tensor([254.3331, 247.3889, 248.8605, 248.6299, 240.1793], dtype=torch.float64)
+DEBUG    17:24:23     output: tensor([ 500., 1410., 1632., 1594., 1376., 1506.,  726.,  972., 1330.,   96.,
+         630.,  824.,  260.,  -60.,  374., 1384.,  562.,  314.,  506.,  544.,
+         540.,  748.,  338.,  724.,  940.,  588.,  720.,  188., 1056.,  214.,
+         536.,  450.,  656.,  682., -100.,  534.,   -6., -540.,  408.,  370.,
+         494.,  546.,  496.], dtype=torch.float64)
+INFO     17:24:23     [!] Result: sat
+INFO     17:24:23     [!] Runtime: 1.5508
+sat,1.5508
+
+onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
+  (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__189:0): Transpose()
+  (Conv_sequential_10/quant_conv2d_21/QuantConv2D:0): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__191:0): Transpose()
+  (Reshape_sequential_10/flatten_10/Reshape:0): Flatten()
+  (Add_sequential_10/quant_dense_10/ste_sign_54/add:0): Add()
+  (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
+  (Softmax_activation_10): Identity()
+)
+INFO     17:24:38     [!] VNNLIB: 2700 inputs, 43 outputs
+INFO     17:24:38     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
+INFO     17:24:38     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:24:38     [Failed] RandomAttack(seed=327, device=cpu)
+INFO     17:24:38     [Success] PGDAttack(seed=883, device=cpu)
+INFO     17:24:38     [!] Iterations: 0
+INFO     17:24:38     adv (first 5): tensor([254.4107, 254.5390, 242.7084, 247.2145, 243.8245], dtype=torch.float64)
+DEBUG    17:24:38     output: tensor([ 516., 1246., 1504., 1466., 1432., 1458.,  578., 1144., 1242.,   52.,
+         906.,  712.,   52., -132.,  202., 1404.,  418.,  538.,  614.,  472.,
+         548.,  564.,  394.,  628.,  924.,  768.,  564.,  344., 1036.,  -22.,
+         652.,  546.,  692.,  678.,  -80.,  506.,   98., -316.,  316.,  170.,
+         418.,  594.,  612.], dtype=torch.float64)
+INFO     17:24:38     [!] Result: sat
+INFO     17:24:38     [!] Runtime: 0.7985
+sat,0.7985
+
+onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
+  (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__189:0): Transpose()
+  (Conv_sequential_10/quant_conv2d_21/QuantConv2D:0): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__191:0): Transpose()
+  (Reshape_sequential_10/flatten_10/Reshape:0): Flatten()
+  (Add_sequential_10/quant_dense_10/ste_sign_54/add:0): Add()
+  (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
+  (Softmax_activation_10): Identity()
+)
+INFO     17:24:53     [!] VNNLIB: 2700 inputs, 43 outputs
+INFO     17:24:53     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
+INFO     17:24:53     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:24:53     [Failed] RandomAttack(seed=456, device=cpu)
+INFO     17:24:54     [Success] PGDAttack(seed=766, device=cpu)
+INFO     17:24:54     [!] Iterations: 0
+INFO     17:24:54     adv (first 5): tensor([248.3097, 246.9586, 243.2142, 242.6253, 234.6805], dtype=torch.float64)
+DEBUG    17:24:54     output: tensor([ 836., 1362., 1604., 1562., 1576., 1438.,  726.,  908., 1330.,  -24.,
+         802.,  660.,  192.,  -96.,  442., 1508.,  566.,  346.,  794.,  492.,
+         492.,  668.,  426.,  496.,  960.,  480.,  668.,  356.,  832.,   90.,
+         528.,  438.,  728.,  774.,   80.,  446., -194., -500.,  316.,  378.,
+         398.,  302.,  260.], dtype=torch.float64)
+INFO     17:24:54     [!] Result: sat
+INFO     17:24:54     [!] Runtime: 1.6309
+sat,1.6309
+
+onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
+  (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__189:0): Transpose()
+  (Conv_sequential_10/quant_conv2d_21/QuantConv2D:0): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__191:0): Transpose()
+  (Reshape_sequential_10/flatten_10/Reshape:0): Flatten()
+  (Add_sequential_10/quant_dense_10/ste_sign_54/add:0): Add()
+  (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
+  (Softmax_activation_10): Identity()
+)
+INFO     17:25:08     [!] VNNLIB: 2700 inputs, 43 outputs
+INFO     17:25:09     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
+INFO     17:25:09     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:25:09     [Failed] RandomAttack(seed=687, device=cpu)
+INFO     17:25:10     [Success] PGDAttack(seed=415, device=cpu)
+INFO     17:25:10     [!] Iterations: 0
+INFO     17:25:10     adv (first 5): tensor([245.9556, 243.5803, 246.2768, 244.7963, 245.7106], dtype=torch.float64)
+DEBUG    17:25:10     output: tensor([ 416., 1414., 1652., 1494., 1416., 1398.,  714.,  928., 1134.,  312.,
+         894.,  692.,  360.,  112.,  362., 1320.,  662.,  302.,  642.,  576.,
+         600.,  440.,   98.,  712.,  724.,  612.,  432.,  252., 1040.,  170.,
+         360.,  626.,  864.,  798.,   44.,  642.,   26., -360.,  212.,  234.,
+         338.,  498.,  528.], dtype=torch.float64)
+INFO     17:25:10     [!] Result: sat
+INFO     17:25:10     [!] Runtime: 1.4692
+sat,1.4692
+
+onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
+  (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__189:0): Transpose()
+  (Conv_sequential_10/quant_conv2d_21/QuantConv2D:0): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__191:0): Transpose()
+  (Reshape_sequential_10/flatten_10/Reshape:0): Flatten()
+  (Add_sequential_10/quant_dense_10/ste_sign_54/add:0): Add()
+  (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
+  (Softmax_activation_10): Identity()
+)
+INFO     17:25:24     [!] VNNLIB: 2700 inputs, 43 outputs
+INFO     17:25:24     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
+INFO     17:25:24     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:25:24     [Failed] RandomAttack(seed=805, device=cpu)
+INFO     17:25:29     [Failed] PGDAttack(seed=505, device=cpu)
+INFO     17:25:29     [!] eps=2.000000, perturbed=113400
+INFO     17:25:29     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:25:29     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:25:30     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:25:31     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:25:32     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:25:33     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:25:33     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:25:34     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:25:35     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:25:36     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:25:37     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:25:38     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:25:39     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:25:40     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:25:42     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:25:43     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:25:44     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:25:45     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:25:46     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:25:47     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:25:48     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:25:49     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:25:50     Try conv_mode=matrix, method=forward+backward, input_split=True
+INFO     17:25:51     [!] Initialization failed
+
+onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
+  (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__189:0): Transpose()
+  (Conv_sequential_10/quant_conv2d_21/QuantConv2D:0): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__191:0): Transpose()
+  (Reshape_sequential_10/flatten_10/Reshape:0): Flatten()
+  (Add_sequential_10/quant_dense_10/ste_sign_54/add:0): Add()
+  (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
+  (Softmax_activation_10): Identity()
+)
+INFO     17:26:06     [!] VNNLIB: 2700 inputs, 43 outputs
+INFO     17:26:06     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
+INFO     17:26:06     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:26:06     [Failed] RandomAttack(seed=272, device=cpu)
+INFO     17:26:12     [Failed] PGDAttack(seed=488, device=cpu)
+INFO     17:26:12     [!] eps=6.000000, perturbed=113400
+INFO     17:26:12     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:26:12     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:26:13     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:26:14     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:26:14     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:26:15     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:26:16     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:26:17     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:26:18     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:26:18     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:26:19     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:26:20     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:26:21     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:26:22     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:26:22     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:26:23     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:26:24     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:26:25     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:26:26     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:26:27     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:26:29     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:26:30     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:26:30     Try conv_mode=matrix, method=forward+backward, input_split=True
+INFO     17:26:31     [!] Initialization failed
+
+onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
+  (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__189:0): Transpose()
+  (Conv_sequential_10/quant_conv2d_21/QuantConv2D:0): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__191:0): Transpose()
+  (Reshape_sequential_10/flatten_10/Reshape:0): Flatten()
+  (Add_sequential_10/quant_dense_10/ste_sign_54/add:0): Add()
+  (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
+  (Softmax_activation_10): Identity()
+)
+INFO     17:26:47     [!] VNNLIB: 2700 inputs, 43 outputs
+INFO     17:26:48     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
+INFO     17:26:48     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:26:48     [Failed] RandomAttack(seed=248, device=cpu)
+INFO     17:26:53     [Failed] PGDAttack(seed=856, device=cpu)
+INFO     17:26:53     [!] eps=10.000000, perturbed=113400
+INFO     17:26:53     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:26:53     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:26:54     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:26:54     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:26:55     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:26:56     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:26:57     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:26:58     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:26:59     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:26:59     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:00     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:27:01     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:02     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:27:03     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:05     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:27:05     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:07     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:27:07     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:09     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:27:10     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:11     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:27:12     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:13     Try conv_mode=matrix, method=forward+backward, input_split=True
+INFO     17:27:14     [!] Initialization failed
+
+onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
+  (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__189:0): Transpose()
+  (Conv_sequential_10/quant_conv2d_21/QuantConv2D:0): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__191:0): Transpose()
+  (Reshape_sequential_10/flatten_10/Reshape:0): Flatten()
+  (Add_sequential_10/quant_dense_10/ste_sign_54/add:0): Add()
+  (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
+  (Softmax_activation_10): Identity()
+)
+INFO     17:27:28     [!] VNNLIB: 2700 inputs, 43 outputs
+INFO     17:27:28     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
+INFO     17:27:28     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:27:28     [Failed] RandomAttack(seed=727, device=cpu)
+INFO     17:27:34     [Failed] PGDAttack(seed=898, device=cpu)
+INFO     17:27:34     [!] eps=20.000000, perturbed=113400
+INFO     17:27:34     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:27:34     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:35     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:27:36     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:37     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:27:38     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:39     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:27:39     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:41     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:27:42     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:43     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:27:44     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:45     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:27:46     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:47     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:27:48     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:48     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:27:49     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:50     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:27:51     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:52     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:27:53     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:27:54     Try conv_mode=matrix, method=forward+backward, input_split=True
+INFO     17:27:55     [!] Initialization failed
+
+onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
+  (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__189:0): Transpose()
+  (Conv_sequential_10/quant_conv2d_21/QuantConv2D:0): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__191:0): Transpose()
+  (Reshape_sequential_10/flatten_10/Reshape:0): Flatten()
+  (Add_sequential_10/quant_dense_10/ste_sign_54/add:0): Add()
+  (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
+  (Softmax_activation_10): Identity()
+)
+INFO     17:28:10     [!] VNNLIB: 2700 inputs, 43 outputs
+INFO     17:28:11     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
+INFO     17:28:11     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:28:11     [Failed] RandomAttack(seed=825, device=cpu)
+INFO     17:28:16     [Failed] PGDAttack(seed=276, device=cpu)
+INFO     17:28:16     [!] eps=30.000000, perturbed=113400
+INFO     17:28:16     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:28:16     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:28:17     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:28:18     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:28:19     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:28:20     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:28:20     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:28:21     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:28:22     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:28:23     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:28:24     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:28:25     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:28:26     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:28:26     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:28:27     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:28:28     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:28:29     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:28:30     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:28:31     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:28:32     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:28:33     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:28:34     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:28:35     Try conv_mode=matrix, method=forward+backward, input_split=True
+INFO     17:28:36     [!] Initialization failed
+
+onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
+  (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__189:0): Transpose()
+  (Conv_sequential_10/quant_conv2d_21/QuantConv2D:0): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__191:0): Transpose()
+  (Reshape_sequential_10/flatten_10/Reshape:0): Flatten()
+  (Add_sequential_10/quant_dense_10/ste_sign_54/add:0): Add()
+  (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
+  (Softmax_activation_10): Identity()
+)
+INFO     17:28:51     [!] VNNLIB: 2700 inputs, 43 outputs
+INFO     17:28:52     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
+INFO     17:28:52     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:28:52     [Failed] RandomAttack(seed=253, device=cpu)
+INFO     17:28:57     [Failed] PGDAttack(seed=551, device=cpu)
+INFO     17:28:57     [!] eps=2.000000, perturbed=113400
+INFO     17:28:57     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:28:57     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:28:58     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:28:59     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:00     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:02     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:03     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:03     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:04     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:05     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:06     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:07     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:08     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:08     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:09     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:10     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:11     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:12     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:13     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:15     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:16     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:17     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:18     Try conv_mode=matrix, method=forward+backward, input_split=True
+INFO     17:29:19     [!] Initialization failed
+
+onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
+  (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__189:0): Transpose()
+  (Conv_sequential_10/quant_conv2d_21/QuantConv2D:0): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__191:0): Transpose()
+  (Reshape_sequential_10/flatten_10/Reshape:0): Flatten()
+  (Add_sequential_10/quant_dense_10/ste_sign_54/add:0): Add()
+  (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
+  (Softmax_activation_10): Identity()
+)
+INFO     17:29:35     [!] VNNLIB: 2700 inputs, 43 outputs
+INFO     17:29:36     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
+INFO     17:29:36     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:29:36     [Failed] RandomAttack(seed=923, device=cpu)
+INFO     17:29:41     [Failed] PGDAttack(seed=832, device=cpu)
+INFO     17:29:41     [!] eps=6.000000, perturbed=113400
+INFO     17:29:41     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:29:41     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:43     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:43     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:44     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:45     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:46     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:47     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:48     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:49     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:49     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:50     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:52     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:53     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:54     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:55     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:56     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:57     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:29:58     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:29:59     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:30:00     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:30:01     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:30:02     Try conv_mode=matrix, method=forward+backward, input_split=True
+INFO     17:30:03     [!] Initialization failed
+
+onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
+  (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__189:0): Transpose()
+  (Conv_sequential_10/quant_conv2d_21/QuantConv2D:0): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__191:0): Transpose()
+  (Reshape_sequential_10/flatten_10/Reshape:0): Flatten()
+  (Add_sequential_10/quant_dense_10/ste_sign_54/add:0): Add()
+  (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
+  (Softmax_activation_10): Identity()
+)
+INFO     17:30:19     [!] VNNLIB: 2700 inputs, 43 outputs
+INFO     17:30:19     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
+INFO     17:30:19     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:30:19     [Failed] RandomAttack(seed=711, device=cpu)
+INFO     17:30:26     [Failed] PGDAttack(seed=629, device=cpu)
+INFO     17:30:26     [!] eps=10.000000, perturbed=113400
+INFO     17:30:26     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:30:26     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:30:27     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:30:28     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:30:29     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:30:30     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:30:32     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:30:33     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:30:35     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:30:36     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:30:38     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:30:40     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:30:42     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:30:43     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:30:45     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:30:47     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:30:48     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:30:50     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:30:52     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:30:53     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:30:55     Try conv_mode=matrix, method=forward+backward, input_split=True
+DEBUG    17:30:57     Try conv_mode=patches, method=forward+backward, input_split=True
+DEBUG    17:30:58     Try conv_mode=matrix, method=forward+backward, input_split=True
+INFO     17:31:00     [!] Initialization failed
+
+onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
+  (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__189:0): Transpose()
+  (Conv_sequential_10/quant_conv2d_21/QuantConv2D:0): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__191:0): Transpose()
+  (Reshape_sequential_10/flatten_10/Reshape:0): Flatten()
+  (Add_sequential_10/quant_dense_10/ste_sign_54/add:0): Add()
+  (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
+  (Softmax_activation_10): Identity()
+)
+INFO     17:31:20     [!] VNNLIB: 2700 inputs, 43 outputs
+INFO     17:31:21     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
+INFO     17:31:21     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:31:21     [Failed] RandomAttack(seed=35, device=cpu)
+INFO     17:31:24     [Success] PGDAttack(seed=561, device=cpu)
+INFO     17:31:24     [!] Iterations: 0
+INFO     17:31:24     adv (first 5): tensor([186.5013, 186.8420, 181.9273, 182.6682, 194.1665], dtype=torch.float64)
+DEBUG    17:31:24     output: tensor([ 242., 1180., 1194., 1568., 1634., 1156.,  160., 1482., 1232.,  638.,
+         560.,  366.,  186., -134.,  344., 1322.,  984.,  960.,  788.,  406.,
+         914.,  182.,  564.,  562.,  702.,  162.,  874.,  762.,  534.,  532.,
+         406.,  708.,  654.,  868.,  110.,  596.,  168.,  430.,  434.,  368.,
+         732.,   52.,  -38.], dtype=torch.float64)
+INFO     17:31:24     [!] Result: sat
+INFO     17:31:24     [!] Runtime: 4.0403
+sat,4.0403
+
+onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
+  (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__189:0): Transpose()
+  (Conv_sequential_10/quant_conv2d_21/QuantConv2D:0): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1), bias=False)
+  (Transpose_sequential_10/quant_conv2d_21/QuantConv2D__191:0): Transpose()
+  (Reshape_sequential_10/flatten_10/Reshape:0): Flatten()
+  (Add_sequential_10/quant_dense_10/ste_sign_54/add:0): Add()
+  (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
+  (Softmax_activation_10): Identity()
+)
+INFO     17:31:44     [!] VNNLIB: 2700 inputs, 43 outputs
+INFO     17:31:45     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
+INFO     17:31:45     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:31:45     [Failed] RandomAttack(seed=193, device=cpu)
+INFO     17:31:48     [Success] PGDAttack(seed=575, device=cpu)
+INFO     17:31:48     [!] Iterations: 0
+INFO     17:31:48     adv (first 5): tensor([196.4036, 177.8545, 201.4330, 195.3236, 192.7571], dtype=torch.float64)
+DEBUG    17:31:48     output: tensor([ -94., 1216., 1322., 1540., 1306., 1052.,  424., 1330.,  776.,  598.,
+         768.,  338.,  154., -410.,  416., 1106., 1040.,  752.,  548.,  750.,
+        1086.,  506.,  456., 1010.,  514.,  166.,  650.,  610.,  526.,  700.,
+         154.,  428.,  470.,  928.,  -98.,  672.,  184.,  -90.,  598.,  252.,
+        1024.,   44.,  454.], dtype=torch.float64)
+INFO     17:31:48     [!] Result: sat
+INFO     17:31:48     [!] Runtime: 4.1935
+sat,4.1935
+
+onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_3/FusedBatchNormV3__156:0): Transpose()
+  (Add_sequential_1/quant_conv2d_4/ste_sign_9/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_4/QuantConv2D__158:0): Transpose()
+  (Conv_sequential_1/quant_conv2d_4/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_3/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_4/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_4/FusedBatchNormV3__168:0): Transpose()
+  (Add_sequential_1/quant_conv2d_5/ste_sign_11/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_5/QuantConv2D__170:0): Transpose()
+  (Conv_sequential_1/batch_normalization_5/FusedBatchNormV3:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  (Transpose_sequential_1/batch_normalization_5/FusedBatchNormV3__176:0): Transpose()
+  (Reshape_sequential_1/flatten_1/Reshape:0): Flatten()
+  (Add_sequential_1/quant_dense_1/ste_sign_13/add:0): Add()
+  (MatMul_sequential_1/quant_dense_1/MatMul:0): Linear(in_features=3136, out_features=256, bias=False)
+  (Mul_sequential_1/batch_normalization_6/batchnorm/mul:0): mul()
+  (Add_sequential_1/batch_normalization_6/batchnorm/add_1:0): Add()
+  (Add_sequential_1/quant_dense_2/ste_sign_15/add:0): Add()
+  (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
+  (Softmax_activation_1): Identity()
+)
+INFO     17:32:07     [!] VNNLIB: 6912 inputs, 43 outputs
+INFO     17:32:08     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
+INFO     17:32:08     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:32:09     [Failed] RandomAttack(seed=673, device=cpu)
+INFO     17:32:15     [Failed] PGDAttack(seed=542, device=cpu)
+INFO     17:32:15     [!] eps=2.000000, perturbed=290304
+INFO     17:32:15     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:32:15     Try conv_mode=patches, method=forward+backward, input_split=True
+
+onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_3/FusedBatchNormV3__156:0): Transpose()
+  (Add_sequential_1/quant_conv2d_4/ste_sign_9/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_4/QuantConv2D__158:0): Transpose()
+  (Conv_sequential_1/quant_conv2d_4/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_3/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_4/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_4/FusedBatchNormV3__168:0): Transpose()
+  (Add_sequential_1/quant_conv2d_5/ste_sign_11/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_5/QuantConv2D__170:0): Transpose()
+  (Conv_sequential_1/batch_normalization_5/FusedBatchNormV3:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  (Transpose_sequential_1/batch_normalization_5/FusedBatchNormV3__176:0): Transpose()
+  (Reshape_sequential_1/flatten_1/Reshape:0): Flatten()
+  (Add_sequential_1/quant_dense_1/ste_sign_13/add:0): Add()
+  (MatMul_sequential_1/quant_dense_1/MatMul:0): Linear(in_features=3136, out_features=256, bias=False)
+  (Mul_sequential_1/batch_normalization_6/batchnorm/mul:0): mul()
+  (Add_sequential_1/batch_normalization_6/batchnorm/add_1:0): Add()
+  (Add_sequential_1/quant_dense_2/ste_sign_15/add:0): Add()
+  (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
+  (Softmax_activation_1): Identity()
+)
+INFO     17:32:38     [!] VNNLIB: 6912 inputs, 43 outputs
+INFO     17:32:40     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
+INFO     17:32:40     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:32:40     [Failed] RandomAttack(seed=825, device=cpu)
+INFO     17:32:47     [Failed] PGDAttack(seed=276, device=cpu)
+INFO     17:32:47     [!] eps=6.000000, perturbed=290304
+INFO     17:32:47     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:32:47     Try conv_mode=patches, method=forward+backward, input_split=True
+
+onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_3/FusedBatchNormV3__156:0): Transpose()
+  (Add_sequential_1/quant_conv2d_4/ste_sign_9/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_4/QuantConv2D__158:0): Transpose()
+  (Conv_sequential_1/quant_conv2d_4/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_3/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_4/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_4/FusedBatchNormV3__168:0): Transpose()
+  (Add_sequential_1/quant_conv2d_5/ste_sign_11/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_5/QuantConv2D__170:0): Transpose()
+  (Conv_sequential_1/batch_normalization_5/FusedBatchNormV3:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  (Transpose_sequential_1/batch_normalization_5/FusedBatchNormV3__176:0): Transpose()
+  (Reshape_sequential_1/flatten_1/Reshape:0): Flatten()
+  (Add_sequential_1/quant_dense_1/ste_sign_13/add:0): Add()
+  (MatMul_sequential_1/quant_dense_1/MatMul:0): Linear(in_features=3136, out_features=256, bias=False)
+  (Mul_sequential_1/batch_normalization_6/batchnorm/mul:0): mul()
+  (Add_sequential_1/batch_normalization_6/batchnorm/add_1:0): Add()
+  (Add_sequential_1/quant_dense_2/ste_sign_15/add:0): Add()
+  (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
+  (Softmax_activation_1): Identity()
+)
+INFO     17:33:11     [!] VNNLIB: 6912 inputs, 43 outputs
+INFO     17:33:13     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
+INFO     17:33:13     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:33:13     [Failed] RandomAttack(seed=623, device=cpu)
+INFO     17:33:20     [Failed] PGDAttack(seed=46, device=cpu)
+INFO     17:33:20     [!] eps=10.000000, perturbed=290304
+INFO     17:33:20     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:33:20     Try conv_mode=patches, method=forward+backward, input_split=True
+
+onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_3/FusedBatchNormV3__156:0): Transpose()
+  (Add_sequential_1/quant_conv2d_4/ste_sign_9/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_4/QuantConv2D__158:0): Transpose()
+  (Conv_sequential_1/quant_conv2d_4/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_3/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_4/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_4/FusedBatchNormV3__168:0): Transpose()
+  (Add_sequential_1/quant_conv2d_5/ste_sign_11/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_5/QuantConv2D__170:0): Transpose()
+  (Conv_sequential_1/batch_normalization_5/FusedBatchNormV3:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  (Transpose_sequential_1/batch_normalization_5/FusedBatchNormV3__176:0): Transpose()
+  (Reshape_sequential_1/flatten_1/Reshape:0): Flatten()
+  (Add_sequential_1/quant_dense_1/ste_sign_13/add:0): Add()
+  (MatMul_sequential_1/quant_dense_1/MatMul:0): Linear(in_features=3136, out_features=256, bias=False)
+  (Mul_sequential_1/batch_normalization_6/batchnorm/mul:0): mul()
+  (Add_sequential_1/batch_normalization_6/batchnorm/add_1:0): Add()
+  (Add_sequential_1/quant_dense_2/ste_sign_15/add:0): Add()
+  (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
+  (Softmax_activation_1): Identity()
+)
+INFO     17:33:43     [!] VNNLIB: 6912 inputs, 43 outputs
+INFO     17:33:45     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
+INFO     17:33:45     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:33:46     [Failed] RandomAttack(seed=314, device=cpu)
+INFO     17:33:52     [Failed] PGDAttack(seed=201, device=cpu)
+INFO     17:33:52     [!] eps=20.000000, perturbed=290304
+INFO     17:33:52     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:33:52     Try conv_mode=patches, method=forward+backward, input_split=True
+
+onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_3/FusedBatchNormV3__156:0): Transpose()
+  (Add_sequential_1/quant_conv2d_4/ste_sign_9/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_4/QuantConv2D__158:0): Transpose()
+  (Conv_sequential_1/quant_conv2d_4/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_3/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_4/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_4/FusedBatchNormV3__168:0): Transpose()
+  (Add_sequential_1/quant_conv2d_5/ste_sign_11/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_5/QuantConv2D__170:0): Transpose()
+  (Conv_sequential_1/batch_normalization_5/FusedBatchNormV3:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  (Transpose_sequential_1/batch_normalization_5/FusedBatchNormV3__176:0): Transpose()
+  (Reshape_sequential_1/flatten_1/Reshape:0): Flatten()
+  (Add_sequential_1/quant_dense_1/ste_sign_13/add:0): Add()
+  (MatMul_sequential_1/quant_dense_1/MatMul:0): Linear(in_features=3136, out_features=256, bias=False)
+  (Mul_sequential_1/batch_normalization_6/batchnorm/mul:0): mul()
+  (Add_sequential_1/batch_normalization_6/batchnorm/add_1:0): Add()
+  (Add_sequential_1/quant_dense_2/ste_sign_15/add:0): Add()
+  (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
+  (Softmax_activation_1): Identity()
+)
+INFO     17:34:15     [!] VNNLIB: 6912 inputs, 43 outputs
+INFO     17:34:17     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
+INFO     17:34:17     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:34:17     [Failed] RandomAttack(seed=609, device=cpu)
+INFO     17:34:24     [Failed] PGDAttack(seed=645, device=cpu)
+INFO     17:34:24     [!] eps=30.000000, perturbed=290304
+INFO     17:34:24     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:34:24     Try conv_mode=patches, method=forward+backward, input_split=True
+
+onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_3/FusedBatchNormV3__156:0): Transpose()
+  (Add_sequential_1/quant_conv2d_4/ste_sign_9/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_4/QuantConv2D__158:0): Transpose()
+  (Conv_sequential_1/quant_conv2d_4/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_3/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_4/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_4/FusedBatchNormV3__168:0): Transpose()
+  (Add_sequential_1/quant_conv2d_5/ste_sign_11/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_5/QuantConv2D__170:0): Transpose()
+  (Conv_sequential_1/batch_normalization_5/FusedBatchNormV3:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  (Transpose_sequential_1/batch_normalization_5/FusedBatchNormV3__176:0): Transpose()
+  (Reshape_sequential_1/flatten_1/Reshape:0): Flatten()
+  (Add_sequential_1/quant_dense_1/ste_sign_13/add:0): Add()
+  (MatMul_sequential_1/quant_dense_1/MatMul:0): Linear(in_features=3136, out_features=256, bias=False)
+  (Mul_sequential_1/batch_normalization_6/batchnorm/mul:0): mul()
+  (Add_sequential_1/batch_normalization_6/batchnorm/add_1:0): Add()
+  (Add_sequential_1/quant_dense_2/ste_sign_15/add:0): Add()
+  (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
+  (Softmax_activation_1): Identity()
+)
+INFO     17:34:51     [!] VNNLIB: 6912 inputs, 43 outputs
+INFO     17:34:54     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
+INFO     17:34:54     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:34:55     [Failed] RandomAttack(seed=618, device=cpu)
+INFO     17:35:03     [Failed] PGDAttack(seed=470, device=cpu)
+INFO     17:35:03     [!] eps=2.000000, perturbed=290304
+INFO     17:35:03     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:35:03     Try conv_mode=patches, method=forward+backward, input_split=True
+
+onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_3/FusedBatchNormV3__156:0): Transpose()
+  (Add_sequential_1/quant_conv2d_4/ste_sign_9/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_4/QuantConv2D__158:0): Transpose()
+  (Conv_sequential_1/quant_conv2d_4/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_3/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_4/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_4/FusedBatchNormV3__168:0): Transpose()
+  (Add_sequential_1/quant_conv2d_5/ste_sign_11/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_5/QuantConv2D__170:0): Transpose()
+  (Conv_sequential_1/batch_normalization_5/FusedBatchNormV3:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  (Transpose_sequential_1/batch_normalization_5/FusedBatchNormV3__176:0): Transpose()
+  (Reshape_sequential_1/flatten_1/Reshape:0): Flatten()
+  (Add_sequential_1/quant_dense_1/ste_sign_13/add:0): Add()
+  (MatMul_sequential_1/quant_dense_1/MatMul:0): Linear(in_features=3136, out_features=256, bias=False)
+  (Mul_sequential_1/batch_normalization_6/batchnorm/mul:0): mul()
+  (Add_sequential_1/batch_normalization_6/batchnorm/add_1:0): Add()
+  (Add_sequential_1/quant_dense_2/ste_sign_15/add:0): Add()
+  (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
+  (Softmax_activation_1): Identity()
+)
+INFO     17:35:28     [!] VNNLIB: 6912 inputs, 43 outputs
+INFO     17:35:31     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
+INFO     17:35:31     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:35:31     [Failed] RandomAttack(seed=315, device=cpu)
+INFO     17:35:39     [Failed] PGDAttack(seed=419, device=cpu)
+INFO     17:35:39     [!] eps=6.000000, perturbed=290304
+INFO     17:35:39     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:35:39     Try conv_mode=patches, method=forward+backward, input_split=True
+
+onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_3/FusedBatchNormV3__156:0): Transpose()
+  (Add_sequential_1/quant_conv2d_4/ste_sign_9/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_4/QuantConv2D__158:0): Transpose()
+  (Conv_sequential_1/quant_conv2d_4/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_3/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_4/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_4/FusedBatchNormV3__168:0): Transpose()
+  (Add_sequential_1/quant_conv2d_5/ste_sign_11/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_5/QuantConv2D__170:0): Transpose()
+  (Conv_sequential_1/batch_normalization_5/FusedBatchNormV3:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  (Transpose_sequential_1/batch_normalization_5/FusedBatchNormV3__176:0): Transpose()
+  (Reshape_sequential_1/flatten_1/Reshape:0): Flatten()
+  (Add_sequential_1/quant_dense_1/ste_sign_13/add:0): Add()
+  (MatMul_sequential_1/quant_dense_1/MatMul:0): Linear(in_features=3136, out_features=256, bias=False)
+  (Mul_sequential_1/batch_normalization_6/batchnorm/mul:0): mul()
+  (Add_sequential_1/batch_normalization_6/batchnorm/add_1:0): Add()
+  (Add_sequential_1/quant_dense_2/ste_sign_15/add:0): Add()
+  (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
+  (Softmax_activation_1): Identity()
+)
+INFO     17:36:04     [!] VNNLIB: 6912 inputs, 43 outputs
+INFO     17:36:06     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
+INFO     17:36:06     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:36:06     [Failed] RandomAttack(seed=630, device=cpu)
+INFO     17:36:14     [Failed] PGDAttack(seed=466, device=cpu)
+INFO     17:36:14     [!] eps=10.000000, perturbed=290304
+INFO     17:36:14     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:36:14     Try conv_mode=patches, method=forward+backward, input_split=True
+
+onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_3/FusedBatchNormV3__156:0): Transpose()
+  (Add_sequential_1/quant_conv2d_4/ste_sign_9/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_4/QuantConv2D__158:0): Transpose()
+  (Conv_sequential_1/quant_conv2d_4/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_3/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_4/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_4/FusedBatchNormV3__168:0): Transpose()
+  (Add_sequential_1/quant_conv2d_5/ste_sign_11/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_5/QuantConv2D__170:0): Transpose()
+  (Conv_sequential_1/batch_normalization_5/FusedBatchNormV3:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  (Transpose_sequential_1/batch_normalization_5/FusedBatchNormV3__176:0): Transpose()
+  (Reshape_sequential_1/flatten_1/Reshape:0): Flatten()
+  (Add_sequential_1/quant_dense_1/ste_sign_13/add:0): Add()
+  (MatMul_sequential_1/quant_dense_1/MatMul:0): Linear(in_features=3136, out_features=256, bias=False)
+  (Mul_sequential_1/batch_normalization_6/batchnorm/mul:0): mul()
+  (Add_sequential_1/batch_normalization_6/batchnorm/add_1:0): Add()
+  (Add_sequential_1/quant_dense_2/ste_sign_15/add:0): Add()
+  (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
+  (Softmax_activation_1): Identity()
+)
+INFO     17:36:40     [!] VNNLIB: 6912 inputs, 43 outputs
+INFO     17:36:42     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
+INFO     17:36:42     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:36:43     [Failed] RandomAttack(seed=570, device=cpu)
+INFO     17:36:50     [Failed] PGDAttack(seed=78, device=cpu)
+INFO     17:36:50     [!] eps=20.000000, perturbed=290304
+INFO     17:36:50     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:36:50     Try conv_mode=patches, method=forward+backward, input_split=True
+
+onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_3/FusedBatchNormV3__156:0): Transpose()
+  (Add_sequential_1/quant_conv2d_4/ste_sign_9/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_4/QuantConv2D__158:0): Transpose()
+  (Conv_sequential_1/quant_conv2d_4/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_3/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_4/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_4/FusedBatchNormV3__168:0): Transpose()
+  (Add_sequential_1/quant_conv2d_5/ste_sign_11/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_5/QuantConv2D__170:0): Transpose()
+  (Conv_sequential_1/batch_normalization_5/FusedBatchNormV3:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  (Transpose_sequential_1/batch_normalization_5/FusedBatchNormV3__176:0): Transpose()
+  (Reshape_sequential_1/flatten_1/Reshape:0): Flatten()
+  (Add_sequential_1/quant_dense_1/ste_sign_13/add:0): Add()
+  (MatMul_sequential_1/quant_dense_1/MatMul:0): Linear(in_features=3136, out_features=256, bias=False)
+  (Mul_sequential_1/batch_normalization_6/batchnorm/mul:0): mul()
+  (Add_sequential_1/batch_normalization_6/batchnorm/add_1:0): Add()
+  (Add_sequential_1/quant_dense_2/ste_sign_15/add:0): Add()
+  (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
+  (Softmax_activation_1): Identity()
+)
+INFO     17:37:16     [!] VNNLIB: 6912 inputs, 43 outputs
+INFO     17:37:19     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
+INFO     17:37:19     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:37:20     [Failed] RandomAttack(seed=728, device=cpu)
+INFO     17:37:28     [Failed] PGDAttack(seed=940, device=cpu)
+INFO     17:37:28     [!] eps=30.000000, perturbed=290304
+INFO     17:37:28     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
+DEBUG    17:37:28     Try conv_mode=patches, method=forward+backward, input_split=True
+
+onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_3/FusedBatchNormV3__156:0): Transpose()
+  (Add_sequential_1/quant_conv2d_4/ste_sign_9/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_4/QuantConv2D__158:0): Transpose()
+  (Conv_sequential_1/quant_conv2d_4/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_3/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_4/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_4/FusedBatchNormV3__168:0): Transpose()
+  (Add_sequential_1/quant_conv2d_5/ste_sign_11/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_5/QuantConv2D__170:0): Transpose()
+  (Conv_sequential_1/batch_normalization_5/FusedBatchNormV3:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  (Transpose_sequential_1/batch_normalization_5/FusedBatchNormV3__176:0): Transpose()
+  (Reshape_sequential_1/flatten_1/Reshape:0): Flatten()
+  (Add_sequential_1/quant_dense_1/ste_sign_13/add:0): Add()
+  (MatMul_sequential_1/quant_dense_1/MatMul:0): Linear(in_features=3136, out_features=256, bias=False)
+  (Mul_sequential_1/batch_normalization_6/batchnorm/mul:0): mul()
+  (Add_sequential_1/batch_normalization_6/batchnorm/add_1:0): Add()
+  (Add_sequential_1/quant_dense_2/ste_sign_15/add:0): Add()
+  (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
+  (Softmax_activation_1): Identity()
+)
+INFO     17:37:55     [!] VNNLIB: 6912 inputs, 43 outputs
+INFO     17:37:57     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
+INFO     17:37:57     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:37:58     [Failed] RandomAttack(seed=193, device=cpu)
+INFO     17:38:05     [Success] PGDAttack(seed=575, device=cpu)
+INFO     17:38:05     [!] Iterations: 0
+INFO     17:38:05     adv (first 5): tensor([194.4600, 191.7126, 190.4500, 189.2178, 192.5567], dtype=torch.float64)
+DEBUG    17:38:05     output: tensor([ 24.,  38., -80.,  22.,  76.,  14., -24.,  40.,  12.,   8.,  10.,   0.,
+        -32., -38.,  -2., -10.,  26., -14.,  52., -14.,  16.,  22., -42., -16.,
+         38., -44.,  34.,   6.,   6.,   8., -16.,  10.,   8.,   0.,   4.,  -2.,
+        -28.,  12., -34., -44.,  16., -26.,  26.], dtype=torch.float64)
+INFO     17:38:05     [!] Result: sat
+INFO     17:38:05     [!] Runtime: 10.5907
+sat,10.5907
+
+onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_3/FusedBatchNormV3__156:0): Transpose()
+  (Add_sequential_1/quant_conv2d_4/ste_sign_9/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_4/QuantConv2D__158:0): Transpose()
+  (Conv_sequential_1/quant_conv2d_4/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_3/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_4/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_4/FusedBatchNormV3__168:0): Transpose()
+  (Add_sequential_1/quant_conv2d_5/ste_sign_11/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_5/QuantConv2D__170:0): Transpose()
+  (Conv_sequential_1/batch_normalization_5/FusedBatchNormV3:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  (Transpose_sequential_1/batch_normalization_5/FusedBatchNormV3__176:0): Transpose()
+  (Reshape_sequential_1/flatten_1/Reshape:0): Flatten()
+  (Add_sequential_1/quant_dense_1/ste_sign_13/add:0): Add()
+  (MatMul_sequential_1/quant_dense_1/MatMul:0): Linear(in_features=3136, out_features=256, bias=False)
+  (Mul_sequential_1/batch_normalization_6/batchnorm/mul:0): mul()
+  (Add_sequential_1/batch_normalization_6/batchnorm/add_1:0): Add()
+  (Add_sequential_1/quant_dense_2/ste_sign_15/add:0): Add()
+  (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
+  (Softmax_activation_1): Identity()
+)
+INFO     17:38:24     [!] VNNLIB: 6912 inputs, 43 outputs
+INFO     17:38:27     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
+INFO     17:38:27     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:38:27     [Failed] RandomAttack(seed=838, device=cpu)
+INFO     17:38:27     [Success] PGDAttack(seed=520, device=cpu)
+INFO     17:38:27     [!] Iterations: 0
+INFO     17:38:27     adv (first 5): tensor([191.7876, 194.1107, 187.9669, 191.0527, 193.3935], dtype=torch.float64)
+DEBUG    17:38:27     output: tensor([ 56.,  50., -52.,  -6.,  76.,  38.,  -4.,  52.,  36., -12., -14., -12.,
+        -16., -50.,   2.,  -2.,  14., -18.,  44., -10., -12.,  30., -30., -24.,
+         30., -60.,  30.,  14., -10.,  12., -12., -14.,  24., -16.,  -4., -26.,
+        -20.,  16., -26., -28.,  20., -46.,  18.], dtype=torch.float64)
+INFO     17:38:27     [!] Result: sat
+INFO     17:38:27     [!] Runtime: 2.9941
+sat,2.9941
+
+onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_3/FusedBatchNormV3__156:0): Transpose()
+  (Add_sequential_1/quant_conv2d_4/ste_sign_9/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_4/QuantConv2D__158:0): Transpose()
+  (Conv_sequential_1/quant_conv2d_4/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_3/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_4/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_4/FusedBatchNormV3__168:0): Transpose()
+  (Add_sequential_1/quant_conv2d_5/ste_sign_11/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_5/QuantConv2D__170:0): Transpose()
+  (Conv_sequential_1/batch_normalization_5/FusedBatchNormV3:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  (Transpose_sequential_1/batch_normalization_5/FusedBatchNormV3__176:0): Transpose()
+  (Reshape_sequential_1/flatten_1/Reshape:0): Flatten()
+  (Add_sequential_1/quant_dense_1/ste_sign_13/add:0): Add()
+  (MatMul_sequential_1/quant_dense_1/MatMul:0): Linear(in_features=3136, out_features=256, bias=False)
+  (Mul_sequential_1/batch_normalization_6/batchnorm/mul:0): mul()
+  (Add_sequential_1/batch_normalization_6/batchnorm/add_1:0): Add()
+  (Add_sequential_1/quant_dense_2/ste_sign_15/add:0): Add()
+  (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
+  (Softmax_activation_1): Identity()
+)
+INFO     17:38:48     [!] VNNLIB: 6912 inputs, 43 outputs
+INFO     17:38:50     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
+INFO     17:38:50     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:38:50     [Failed] RandomAttack(seed=191, device=cpu)
+INFO     17:38:51     [Success] PGDAttack(seed=777, device=cpu)
+INFO     17:38:51     [!] Iterations: 0
+INFO     17:38:51     adv (first 5): tensor([189.8192, 191.9114, 189.0329, 188.8592, 195.8132], dtype=torch.float64)
+DEBUG    17:38:51     output: tensor([ 42.,   4., -70., -24.,  38.,   4., -14.,  66.,  74.,  -2.,   8., -10.,
+         -2., -36.,   0., -12.,  16., -16.,   6., -12.,  18.,  24., -28., -14.,
+         36., -54.,  32., -16.,   0.,  22.,  14.,   4.,  10.,   2.,  10.,  -8.,
+        -18.,   6., -24., -26.,  42., -44.,  36.], dtype=torch.float64)
+INFO     17:38:51     [!] Result: sat
+INFO     17:38:51     [!] Runtime: 3.3450
+sat,3.3450
+
+onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_3/FusedBatchNormV3__156:0): Transpose()
+  (Add_sequential_1/quant_conv2d_4/ste_sign_9/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_4/QuantConv2D__158:0): Transpose()
+  (Conv_sequential_1/quant_conv2d_4/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_3/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_4/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_4/FusedBatchNormV3__168:0): Transpose()
+  (Add_sequential_1/quant_conv2d_5/ste_sign_11/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_5/QuantConv2D__170:0): Transpose()
+  (Conv_sequential_1/batch_normalization_5/FusedBatchNormV3:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  (Transpose_sequential_1/batch_normalization_5/FusedBatchNormV3__176:0): Transpose()
+  (Reshape_sequential_1/flatten_1/Reshape:0): Flatten()
+  (Add_sequential_1/quant_dense_1/ste_sign_13/add:0): Add()
+  (MatMul_sequential_1/quant_dense_1/MatMul:0): Linear(in_features=3136, out_features=256, bias=False)
+  (Mul_sequential_1/batch_normalization_6/batchnorm/mul:0): mul()
+  (Add_sequential_1/batch_normalization_6/batchnorm/add_1:0): Add()
+  (Add_sequential_1/quant_dense_2/ste_sign_15/add:0): Add()
+  (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
+  (Softmax_activation_1): Identity()
+)
+INFO     17:39:10     [!] VNNLIB: 6912 inputs, 43 outputs
+INFO     17:39:12     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
+INFO     17:39:12     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:39:13     [Failed] RandomAttack(seed=272, device=cpu)
+INFO     17:39:13     [Success] PGDAttack(seed=488, device=cpu)
+INFO     17:39:13     [!] Iterations: 0
+INFO     17:39:13     adv (first 5): tensor([186.2804, 184.1315, 183.9879, 188.6024, 197.8378], dtype=torch.float64)
+DEBUG    17:39:13     output: tensor([ 34.,  40., -50.,   0.,  42.,   8., -22.,  46.,  62.,  -6.,  12.,  10.,
+        -18., -52.,   4., -20.,  20.,  -8.,  26., -32.,  34.,  16., -24., -10.,
+         24., -46.,  40.,   0.,  12.,  18.,  22.,  24.,   6., -14.,  -6., -24.,
+        -30.,   6.,   4., -42.,  10., -40.,  20.], dtype=torch.float64)
+INFO     17:39:13     [!] Result: sat
+INFO     17:39:13     [!] Runtime: 2.8709
+sat,2.8709
+
+onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_3/FusedBatchNormV3__156:0): Transpose()
+  (Add_sequential_1/quant_conv2d_4/ste_sign_9/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_4/QuantConv2D__158:0): Transpose()
+  (Conv_sequential_1/quant_conv2d_4/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_1/max_pooling2d_3/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_1/batch_normalization_4/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_1/batch_normalization_4/FusedBatchNormV3__168:0): Transpose()
+  (Add_sequential_1/quant_conv2d_5/ste_sign_11/add:0): Add()
+  (Transpose_sequential_1/quant_conv2d_5/QuantConv2D__170:0): Transpose()
+  (Conv_sequential_1/batch_normalization_5/FusedBatchNormV3:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  (Transpose_sequential_1/batch_normalization_5/FusedBatchNormV3__176:0): Transpose()
+  (Reshape_sequential_1/flatten_1/Reshape:0): Flatten()
+  (Add_sequential_1/quant_dense_1/ste_sign_13/add:0): Add()
+  (MatMul_sequential_1/quant_dense_1/MatMul:0): Linear(in_features=3136, out_features=256, bias=False)
+  (Mul_sequential_1/batch_normalization_6/batchnorm/mul:0): mul()
+  (Add_sequential_1/batch_normalization_6/batchnorm/add_1:0): Add()
+  (Add_sequential_1/quant_dense_2/ste_sign_15/add:0): Add()
+  (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
+  (Softmax_activation_1): Identity()
+)
+INFO     17:39:31     [!] VNNLIB: 6912 inputs, 43 outputs
+INFO     17:39:32     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
+INFO     17:39:32     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:39:33     [Failed] RandomAttack(seed=961, device=cpu)
+INFO     17:39:37     [Success] PGDAttack(seed=656, device=cpu)
+INFO     17:39:37     [!] Iterations: 0
+INFO     17:39:37     adv (first 5): tensor([182.5237, 186.1274, 188.2749, 199.8075, 181.3734], dtype=torch.float64)
+DEBUG    17:39:37     output: tensor([ 48.,  66., -48.,  22.,  80.,  38.,  28.,  32.,  36., -16., -10.,  -4.,
+        -24., -38., -10., -22.,  10., -14.,  28., -34.,   4.,  -2., -26., -20.,
+         14., -32.,  26.,  14.,  -2.,  12., -40.,   2.,  32.,  -8.,  12., -22.,
+          8.,  -8., -14., -52.,   8., -38.,  38.], dtype=torch.float64)
+INFO     17:39:37     [!] Result: sat
+INFO     17:39:37     [!] Runtime: 7.1512
+sat,7.1512
+
+onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_15/FusedBatchNormV3__113:0): Transpose()
+  (Add_sequential_4/quant_conv2d_13/ste_sign_36/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_13/QuantConv2D__115:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_13/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_13/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_16/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_16/FusedBatchNormV3__125:0): Transpose()
+  (Add_sequential_4/quant_conv2d_14/ste_sign_38/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_14/QuantConv2D__127:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_14/QuantConv2D:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_14/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_17/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_17/FusedBatchNormV3__137:0): Transpose()
+  (Reshape_sequential_4/flatten_4/Reshape:0): Flatten()
+  (Add_sequential_4/quant_dense_7/ste_sign_40/add:0): Add()
+  (MatMul_sequential_4/quant_dense_7/MatMul:0): Linear(in_features=1600, out_features=1024, bias=False)
+  (Mul_sequential_4/batch_normalization_18/batchnorm/mul:0): mul()
+  (Add_sequential_4/batch_normalization_18/batchnorm/add_1:0): Add()
+  (Add_sequential_4/quant_dense_8/ste_sign_42/add:0): Add()
+  (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
+  (Softmax_activation_4): Identity()
+)
+INFO     17:39:57     [!] VNNLIB: 12288 inputs, 43 outputs
+INFO     17:40:01     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
+INFO     17:40:01     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:40:02     [Failed] RandomAttack(seed=457, device=cpu)
+killed
+
+onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_15/FusedBatchNormV3__113:0): Transpose()
+  (Add_sequential_4/quant_conv2d_13/ste_sign_36/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_13/QuantConv2D__115:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_13/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_13/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_16/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_16/FusedBatchNormV3__125:0): Transpose()
+  (Add_sequential_4/quant_conv2d_14/ste_sign_38/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_14/QuantConv2D__127:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_14/QuantConv2D:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_14/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_17/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_17/FusedBatchNormV3__137:0): Transpose()
+  (Reshape_sequential_4/flatten_4/Reshape:0): Flatten()
+  (Add_sequential_4/quant_dense_7/ste_sign_40/add:0): Add()
+  (MatMul_sequential_4/quant_dense_7/MatMul:0): Linear(in_features=1600, out_features=1024, bias=False)
+  (Mul_sequential_4/batch_normalization_18/batchnorm/mul:0): mul()
+  (Add_sequential_4/batch_normalization_18/batchnorm/add_1:0): Add()
+  (Add_sequential_4/quant_dense_8/ste_sign_42/add:0): Add()
+  (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
+  (Softmax_activation_4): Identity()
+)
+INFO     17:40:27     [!] VNNLIB: 12288 inputs, 43 outputs
+INFO     17:40:30     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
+INFO     17:40:30     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:40:30     [Failed] RandomAttack(seed=29, device=cpu)
+killed
+
+onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_15/FusedBatchNormV3__113:0): Transpose()
+  (Add_sequential_4/quant_conv2d_13/ste_sign_36/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_13/QuantConv2D__115:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_13/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_13/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_16/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_16/FusedBatchNormV3__125:0): Transpose()
+  (Add_sequential_4/quant_conv2d_14/ste_sign_38/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_14/QuantConv2D__127:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_14/QuantConv2D:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_14/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_17/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_17/FusedBatchNormV3__137:0): Transpose()
+  (Reshape_sequential_4/flatten_4/Reshape:0): Flatten()
+  (Add_sequential_4/quant_dense_7/ste_sign_40/add:0): Add()
+  (MatMul_sequential_4/quant_dense_7/MatMul:0): Linear(in_features=1600, out_features=1024, bias=False)
+  (Mul_sequential_4/batch_normalization_18/batchnorm/mul:0): mul()
+  (Add_sequential_4/batch_normalization_18/batchnorm/add_1:0): Add()
+  (Add_sequential_4/quant_dense_8/ste_sign_42/add:0): Add()
+  (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
+  (Softmax_activation_4): Identity()
+)
+INFO     17:40:53     [!] VNNLIB: 12288 inputs, 43 outputs
+INFO     17:40:57     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
+INFO     17:40:57     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:40:58     [Failed] RandomAttack(seed=139, device=cpu)
+killed
+
+onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_15/FusedBatchNormV3__113:0): Transpose()
+  (Add_sequential_4/quant_conv2d_13/ste_sign_36/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_13/QuantConv2D__115:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_13/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_13/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_16/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_16/FusedBatchNormV3__125:0): Transpose()
+  (Add_sequential_4/quant_conv2d_14/ste_sign_38/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_14/QuantConv2D__127:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_14/QuantConv2D:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_14/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_17/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_17/FusedBatchNormV3__137:0): Transpose()
+  (Reshape_sequential_4/flatten_4/Reshape:0): Flatten()
+  (Add_sequential_4/quant_dense_7/ste_sign_40/add:0): Add()
+  (MatMul_sequential_4/quant_dense_7/MatMul:0): Linear(in_features=1600, out_features=1024, bias=False)
+  (Mul_sequential_4/batch_normalization_18/batchnorm/mul:0): mul()
+  (Add_sequential_4/batch_normalization_18/batchnorm/add_1:0): Add()
+  (Add_sequential_4/quant_dense_8/ste_sign_42/add:0): Add()
+  (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
+  (Softmax_activation_4): Identity()
+)
+INFO     17:41:21     [!] VNNLIB: 12288 inputs, 43 outputs
+INFO     17:41:24     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
+INFO     17:41:24     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:41:25     [Failed] RandomAttack(seed=673, device=cpu)
+killed
+
+onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_15/FusedBatchNormV3__113:0): Transpose()
+  (Add_sequential_4/quant_conv2d_13/ste_sign_36/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_13/QuantConv2D__115:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_13/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_13/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_16/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_16/FusedBatchNormV3__125:0): Transpose()
+  (Add_sequential_4/quant_conv2d_14/ste_sign_38/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_14/QuantConv2D__127:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_14/QuantConv2D:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_14/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_17/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_17/FusedBatchNormV3__137:0): Transpose()
+  (Reshape_sequential_4/flatten_4/Reshape:0): Flatten()
+  (Add_sequential_4/quant_dense_7/ste_sign_40/add:0): Add()
+  (MatMul_sequential_4/quant_dense_7/MatMul:0): Linear(in_features=1600, out_features=1024, bias=False)
+  (Mul_sequential_4/batch_normalization_18/batchnorm/mul:0): mul()
+  (Add_sequential_4/batch_normalization_18/batchnorm/add_1:0): Add()
+  (Add_sequential_4/quant_dense_8/ste_sign_42/add:0): Add()
+  (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
+  (Softmax_activation_4): Identity()
+)
+INFO     17:41:52     [!] VNNLIB: 12288 inputs, 43 outputs
+INFO     17:41:56     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
+INFO     17:41:56     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:41:57     [Failed] RandomAttack(seed=193, device=cpu)
+killed
+
+onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_15/FusedBatchNormV3__113:0): Transpose()
+  (Add_sequential_4/quant_conv2d_13/ste_sign_36/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_13/QuantConv2D__115:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_13/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_13/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_16/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_16/FusedBatchNormV3__125:0): Transpose()
+  (Add_sequential_4/quant_conv2d_14/ste_sign_38/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_14/QuantConv2D__127:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_14/QuantConv2D:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_14/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_17/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_17/FusedBatchNormV3__137:0): Transpose()
+  (Reshape_sequential_4/flatten_4/Reshape:0): Flatten()
+  (Add_sequential_4/quant_dense_7/ste_sign_40/add:0): Add()
+  (MatMul_sequential_4/quant_dense_7/MatMul:0): Linear(in_features=1600, out_features=1024, bias=False)
+  (Mul_sequential_4/batch_normalization_18/batchnorm/mul:0): mul()
+  (Add_sequential_4/batch_normalization_18/batchnorm/add_1:0): Add()
+  (Add_sequential_4/quant_dense_8/ste_sign_42/add:0): Add()
+  (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
+  (Softmax_activation_4): Identity()
+)
+INFO     17:42:20     [!] VNNLIB: 12288 inputs, 43 outputs
+INFO     17:42:22     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
+INFO     17:42:22     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:42:22     [Failed] RandomAttack(seed=595, device=cpu)
+killed
+
+onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_15/FusedBatchNormV3__113:0): Transpose()
+  (Add_sequential_4/quant_conv2d_13/ste_sign_36/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_13/QuantConv2D__115:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_13/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_13/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_16/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_16/FusedBatchNormV3__125:0): Transpose()
+  (Add_sequential_4/quant_conv2d_14/ste_sign_38/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_14/QuantConv2D__127:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_14/QuantConv2D:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_14/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_17/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_17/FusedBatchNormV3__137:0): Transpose()
+  (Reshape_sequential_4/flatten_4/Reshape:0): Flatten()
+  (Add_sequential_4/quant_dense_7/ste_sign_40/add:0): Add()
+  (MatMul_sequential_4/quant_dense_7/MatMul:0): Linear(in_features=1600, out_features=1024, bias=False)
+  (Mul_sequential_4/batch_normalization_18/batchnorm/mul:0): mul()
+  (Add_sequential_4/batch_normalization_18/batchnorm/add_1:0): Add()
+  (Add_sequential_4/quant_dense_8/ste_sign_42/add:0): Add()
+  (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
+  (Softmax_activation_4): Identity()
+)
+INFO     17:42:41     [!] VNNLIB: 12288 inputs, 43 outputs
+INFO     17:42:43     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
+INFO     17:42:43     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:42:44     [Failed] RandomAttack(seed=590, device=cpu)
+killed
+
+onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_15/FusedBatchNormV3__113:0): Transpose()
+  (Add_sequential_4/quant_conv2d_13/ste_sign_36/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_13/QuantConv2D__115:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_13/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_13/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_16/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_16/FusedBatchNormV3__125:0): Transpose()
+  (Add_sequential_4/quant_conv2d_14/ste_sign_38/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_14/QuantConv2D__127:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_14/QuantConv2D:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_14/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_17/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_17/FusedBatchNormV3__137:0): Transpose()
+  (Reshape_sequential_4/flatten_4/Reshape:0): Flatten()
+  (Add_sequential_4/quant_dense_7/ste_sign_40/add:0): Add()
+  (MatMul_sequential_4/quant_dense_7/MatMul:0): Linear(in_features=1600, out_features=1024, bias=False)
+  (Mul_sequential_4/batch_normalization_18/batchnorm/mul:0): mul()
+  (Add_sequential_4/batch_normalization_18/batchnorm/add_1:0): Add()
+  (Add_sequential_4/quant_dense_8/ste_sign_42/add:0): Add()
+  (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
+  (Softmax_activation_4): Identity()
+)
+INFO     17:43:02     [!] VNNLIB: 12288 inputs, 43 outputs
+INFO     17:43:05     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
+INFO     17:43:05     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:43:05     [Failed] RandomAttack(seed=355, device=cpu)
+killed
+
+onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_15/FusedBatchNormV3__113:0): Transpose()
+  (Add_sequential_4/quant_conv2d_13/ste_sign_36/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_13/QuantConv2D__115:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_13/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_13/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_16/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_16/FusedBatchNormV3__125:0): Transpose()
+  (Add_sequential_4/quant_conv2d_14/ste_sign_38/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_14/QuantConv2D__127:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_14/QuantConv2D:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_14/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_17/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_17/FusedBatchNormV3__137:0): Transpose()
+  (Reshape_sequential_4/flatten_4/Reshape:0): Flatten()
+  (Add_sequential_4/quant_dense_7/ste_sign_40/add:0): Add()
+  (MatMul_sequential_4/quant_dense_7/MatMul:0): Linear(in_features=1600, out_features=1024, bias=False)
+  (Mul_sequential_4/batch_normalization_18/batchnorm/mul:0): mul()
+  (Add_sequential_4/batch_normalization_18/batchnorm/add_1:0): Add()
+  (Add_sequential_4/quant_dense_8/ste_sign_42/add:0): Add()
+  (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
+  (Softmax_activation_4): Identity()
+)
+INFO     17:43:24     [!] VNNLIB: 12288 inputs, 43 outputs
+INFO     17:43:26     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
+INFO     17:43:26     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:43:26     [Failed] RandomAttack(seed=60, device=cpu)
+killed 
+
+onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_15/FusedBatchNormV3__113:0): Transpose()
+  (Add_sequential_4/quant_conv2d_13/ste_sign_36/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_13/QuantConv2D__115:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_13/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_13/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_16/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_16/FusedBatchNormV3__125:0): Transpose()
+  (Add_sequential_4/quant_conv2d_14/ste_sign_38/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_14/QuantConv2D__127:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_14/QuantConv2D:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_14/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_17/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_17/FusedBatchNormV3__137:0): Transpose()
+  (Reshape_sequential_4/flatten_4/Reshape:0): Flatten()
+  (Add_sequential_4/quant_dense_7/ste_sign_40/add:0): Add()
+  (MatMul_sequential_4/quant_dense_7/MatMul:0): Linear(in_features=1600, out_features=1024, bias=False)
+  (Mul_sequential_4/batch_normalization_18/batchnorm/mul:0): mul()
+  (Add_sequential_4/batch_normalization_18/batchnorm/add_1:0): Add()
+  (Add_sequential_4/quant_dense_8/ste_sign_42/add:0): Add()
+  (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
+  (Softmax_activation_4): Identity()
+)
+INFO     17:43:46     [!] VNNLIB: 12288 inputs, 43 outputs
+INFO     17:43:48     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
+INFO     17:43:48     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:43:48     [Failed] RandomAttack(seed=624, device=cpu)
+killed
+
+onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_15/FusedBatchNormV3__113:0): Transpose()
+  (Add_sequential_4/quant_conv2d_13/ste_sign_36/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_13/QuantConv2D__115:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_13/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_13/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_16/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_16/FusedBatchNormV3__125:0): Transpose()
+  (Add_sequential_4/quant_conv2d_14/ste_sign_38/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_14/QuantConv2D__127:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_14/QuantConv2D:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_14/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_17/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_17/FusedBatchNormV3__137:0): Transpose()
+  (Reshape_sequential_4/flatten_4/Reshape:0): Flatten()
+  (Add_sequential_4/quant_dense_7/ste_sign_40/add:0): Add()
+  (MatMul_sequential_4/quant_dense_7/MatMul:0): Linear(in_features=1600, out_features=1024, bias=False)
+  (Mul_sequential_4/batch_normalization_18/batchnorm/mul:0): mul()
+  (Add_sequential_4/batch_normalization_18/batchnorm/add_1:0): Add()
+  (Add_sequential_4/quant_dense_8/ste_sign_42/add:0): Add()
+  (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
+  (Softmax_activation_4): Identity()
+)
+INFO     17:44:07     [!] VNNLIB: 12288 inputs, 43 outputs
+INFO     17:44:09     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
+INFO     17:44:09     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:44:10     [Failed] RandomAttack(seed=827, device=cpu)
+killed
+
+onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_15/FusedBatchNormV3__113:0): Transpose()
+  (Add_sequential_4/quant_conv2d_13/ste_sign_36/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_13/QuantConv2D__115:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_13/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_13/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_16/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_16/FusedBatchNormV3__125:0): Transpose()
+  (Add_sequential_4/quant_conv2d_14/ste_sign_38/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_14/QuantConv2D__127:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_14/QuantConv2D:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_14/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_17/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_17/FusedBatchNormV3__137:0): Transpose()
+  (Reshape_sequential_4/flatten_4/Reshape:0): Flatten()
+  (Add_sequential_4/quant_dense_7/ste_sign_40/add:0): Add()
+  (MatMul_sequential_4/quant_dense_7/MatMul:0): Linear(in_features=1600, out_features=1024, bias=False)
+  (Mul_sequential_4/batch_normalization_18/batchnorm/mul:0): mul()
+  (Add_sequential_4/batch_normalization_18/batchnorm/add_1:0): Add()
+  (Add_sequential_4/quant_dense_8/ste_sign_42/add:0): Add()
+  (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
+  (Softmax_activation_4): Identity()
+)
+INFO     17:44:29     [!] VNNLIB: 12288 inputs, 43 outputs
+INFO     17:44:31     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
+INFO     17:44:31     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:44:31     [Failed] RandomAttack(seed=692, device=cpu)
+killed
+
+onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_15/FusedBatchNormV3__113:0): Transpose()
+  (Add_sequential_4/quant_conv2d_13/ste_sign_36/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_13/QuantConv2D__115:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_13/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_13/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_16/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_16/FusedBatchNormV3__125:0): Transpose()
+  (Add_sequential_4/quant_conv2d_14/ste_sign_38/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_14/QuantConv2D__127:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_14/QuantConv2D:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_14/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_17/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_17/FusedBatchNormV3__137:0): Transpose()
+  (Reshape_sequential_4/flatten_4/Reshape:0): Flatten()
+  (Add_sequential_4/quant_dense_7/ste_sign_40/add:0): Add()
+  (MatMul_sequential_4/quant_dense_7/MatMul:0): Linear(in_features=1600, out_features=1024, bias=False)
+  (Mul_sequential_4/batch_normalization_18/batchnorm/mul:0): mul()
+  (Add_sequential_4/batch_normalization_18/batchnorm/add_1:0): Add()
+  (Add_sequential_4/quant_dense_8/ste_sign_42/add:0): Add()
+  (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
+  (Softmax_activation_4): Identity()
+)
+INFO     17:44:51     [!] VNNLIB: 12288 inputs, 43 outputs
+INFO     17:44:53     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
+INFO     17:44:53     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:44:53     [Failed] RandomAttack(seed=911, device=cpu)
+killed
+
+onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_15/FusedBatchNormV3__113:0): Transpose()
+  (Add_sequential_4/quant_conv2d_13/ste_sign_36/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_13/QuantConv2D__115:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_13/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_13/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_16/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_16/FusedBatchNormV3__125:0): Transpose()
+  (Add_sequential_4/quant_conv2d_14/ste_sign_38/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_14/QuantConv2D__127:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_14/QuantConv2D:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_14/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_17/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_17/FusedBatchNormV3__137:0): Transpose()
+  (Reshape_sequential_4/flatten_4/Reshape:0): Flatten()
+  (Add_sequential_4/quant_dense_7/ste_sign_40/add:0): Add()
+  (MatMul_sequential_4/quant_dense_7/MatMul:0): Linear(in_features=1600, out_features=1024, bias=False)
+  (Mul_sequential_4/batch_normalization_18/batchnorm/mul:0): mul()
+  (Add_sequential_4/batch_normalization_18/batchnorm/add_1:0): Add()
+  (Add_sequential_4/quant_dense_8/ste_sign_42/add:0): Add()
+  (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
+  (Softmax_activation_4): Identity()
+)
+INFO     17:45:14     [!] VNNLIB: 12288 inputs, 43 outputs
+INFO     17:45:16     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
+INFO     17:45:16     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:45:16     [Failed] RandomAttack(seed=535, device=cpu)
+killed
+
+onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+Automatic inference of operator: sign
+ConvertModel(
+  (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(32, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_15/FusedBatchNormV3__113:0): Transpose()
+  (Add_sequential_4/quant_conv2d_13/ste_sign_36/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_13/QuantConv2D__115:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_13/QuantConv2D:0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_13/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_16/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_16/FusedBatchNormV3__125:0): Transpose()
+  (Add_sequential_4/quant_conv2d_14/ste_sign_38/add:0): Add()
+  (Transpose_sequential_4/quant_conv2d_14/QuantConv2D__127:0): Transpose()
+  (Conv_sequential_4/quant_conv2d_14/QuantConv2D:0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), bias=False)
+  (MaxPool_sequential_4/max_pooling2d_14/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  (BatchNormalization_sequential_4/batch_normalization_17/FusedBatchNormV3:0): BatchNormWrapper(
+    (bnu): BatchNormUnsafe(64, eps=0.0010000000474974513, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Transpose_sequential_4/batch_normalization_17/FusedBatchNormV3__137:0): Transpose()
+  (Reshape_sequential_4/flatten_4/Reshape:0): Flatten()
+  (Add_sequential_4/quant_dense_7/ste_sign_40/add:0): Add()
+  (MatMul_sequential_4/quant_dense_7/MatMul:0): Linear(in_features=1600, out_features=1024, bias=False)
+  (Mul_sequential_4/batch_normalization_18/batchnorm/mul:0): mul()
+  (Add_sequential_4/batch_normalization_18/batchnorm/add_1:0): Add()
+  (Add_sequential_4/quant_dense_8/ste_sign_42/add:0): Add()
+  (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
+  (Softmax_activation_4): Identity()
+)
+INFO     17:45:36     [!] VNNLIB: 12288 inputs, 43 outputs
+INFO     17:45:38     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
+INFO     17:45:38     [!] Output shape: (1, 43)
+
+[!] Current settings:
+	- max_hidden_branches           : 5000
+	- max_hidden_visited_branches   : 20000
+	- use_attack                    : True
+	- use_restart                   : True
+	- use_stabilize                 : True
+
+
+INFO     17:45:39     [Failed] RandomAttack(seed=904, device=cpu)
+killed 
+
