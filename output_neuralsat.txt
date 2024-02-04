@@ -8,7 +8,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:37:07     [!] VNNLIB: 2700 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__185:0): Transpose()
   (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
   (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
   (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
@@ -20,9 +22,8 @@ ConvertModel(
   (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
   (Softmax_activation_10): Identity()
 )
-INFO     17:24:04     [!] VNNLIB: 2700 inputs, 43 outputs
-INFO     17:24:05     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
-INFO     17:24:05     [!] Output shape: (1, 43)
+INFO     00:37:07     [!] Input shape: (1, 3, 30, 30)
+INFO     00:37:07     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -32,18 +33,16 @@ INFO     17:24:05     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:24:05     [Failed] RandomAttack(seed=332, device=cpu)
-INFO     17:24:06     [Success] PGDAttack(seed=254, device=cpu)
-INFO     17:24:06     [!] Iterations: 0
-INFO     17:24:06     adv (first 5): tensor([254.8780, 249.4422, 246.9960, 249.0272, 240.2150], dtype=torch.float64)
-DEBUG    17:24:06     output: tensor([ 496., 1350., 1536., 1514., 1292., 1454.,  690., 1088., 1214.,  124.,
-         870.,  932.,  228., -192.,  342., 1364.,  606.,  430.,  650.,  644.,
-         540.,  832.,  314.,  688.,  952.,  576.,  584.,  236., 1060.,  138.,
-         620.,  506.,  712.,  642.,  -64.,  574.,  -74., -564.,  300.,  382.,
-         458.,  538.,  612.], dtype=torch.float64)
-INFO     17:24:06     [!] Result: sat
-INFO     17:24:06     [!] Runtime: 2.2197
-sat,2.2197
+INFO     00:37:07     RandomAttack(seed=637, device=cpu)
+INFO     00:37:07     PGDAttack(seed=502, device=cpu)
+INFO     00:37:07     [!] Iterations: 0
+INFO     00:37:07     adv (first 5): tensor([254.5912, 254.9919, 254.1197, 250.8191, 254.4812])
+DEBUG    00:37:07     output: tensor([ 614.,  940., 1166.,  860., 1182.,  680.,  424.,  910.,  840.,  378.,
+         768., 1338.,  774.,  490., 1196., 1178.,   60., 1556.,  908.,  818.,
+        1214.,  606., 1372.,  854.,  562., 1210., 1378.,  522., 1234.,  736.,
+        1078.,  752.,  522.,  380., -334.,  -68.,  568., -254.,  290.,  192.,
+         260.,  564.,  366.])
+sat,0.6525
 
 onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -54,7 +53,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:37:22     [!] VNNLIB: 2700 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__185:0): Transpose()
   (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
   (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
   (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
@@ -66,9 +67,8 @@ ConvertModel(
   (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
   (Softmax_activation_10): Identity()
 )
-INFO     17:24:21     [!] VNNLIB: 2700 inputs, 43 outputs
-INFO     17:24:22     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
-INFO     17:24:22     [!] Output shape: (1, 43)
+INFO     00:37:22     [!] Input shape: (1, 3, 30, 30)
+INFO     00:37:22     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -78,18 +78,16 @@ INFO     17:24:22     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:24:22     [Failed] RandomAttack(seed=465, device=cpu)
-INFO     17:24:23     [Success] PGDAttack(seed=196, device=cpu)
-INFO     17:24:23     [!] Iterations: 0
-INFO     17:24:23     adv (first 5): tensor([254.3331, 247.3889, 248.8605, 248.6299, 240.1793], dtype=torch.float64)
-DEBUG    17:24:23     output: tensor([ 500., 1410., 1632., 1594., 1376., 1506.,  726.,  972., 1330.,   96.,
-         630.,  824.,  260.,  -60.,  374., 1384.,  562.,  314.,  506.,  544.,
-         540.,  748.,  338.,  724.,  940.,  588.,  720.,  188., 1056.,  214.,
-         536.,  450.,  656.,  682., -100.,  534.,   -6., -540.,  408.,  370.,
-         494.,  546.,  496.], dtype=torch.float64)
-INFO     17:24:23     [!] Result: sat
-INFO     17:24:23     [!] Runtime: 1.5508
-sat,1.5508
+INFO     00:37:22     RandomAttack(seed=651, device=cpu)
+INFO     00:37:22     PGDAttack(seed=44, device=cpu)
+INFO     00:37:22     [!] Iterations: 0
+INFO     00:37:22     adv (first 5): tensor([253.8784, 254.1920, 254.4834, 247.8061, 253.8839])
+DEBUG    00:37:22     output: tensor([ 594.,  940., 1098.,  896., 1170.,  656.,  472.,  938.,  848.,  438.,
+         780., 1402.,  746.,  450., 1224., 1146.,   72., 1592.,  936.,  838.,
+        1190.,  674., 1384.,  834.,  602., 1258., 1290.,  514., 1246.,  780.,
+        1058.,  736.,  526.,  360., -370., -160.,  524., -330.,  250.,  164.,
+         332.,  616.,  346.])
+sat,0.6466
 
 onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -100,7 +98,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:37:36     [!] VNNLIB: 2700 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__185:0): Transpose()
   (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
   (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
   (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
@@ -112,9 +112,8 @@ ConvertModel(
   (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
   (Softmax_activation_10): Identity()
 )
-INFO     17:24:38     [!] VNNLIB: 2700 inputs, 43 outputs
-INFO     17:24:38     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
-INFO     17:24:38     [!] Output shape: (1, 43)
+INFO     00:37:37     [!] Input shape: (1, 3, 30, 30)
+INFO     00:37:37     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -124,18 +123,16 @@ INFO     17:24:38     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:24:38     [Failed] RandomAttack(seed=327, device=cpu)
-INFO     17:24:38     [Success] PGDAttack(seed=883, device=cpu)
-INFO     17:24:38     [!] Iterations: 0
-INFO     17:24:38     adv (first 5): tensor([254.4107, 254.5390, 242.7084, 247.2145, 243.8245], dtype=torch.float64)
-DEBUG    17:24:38     output: tensor([ 516., 1246., 1504., 1466., 1432., 1458.,  578., 1144., 1242.,   52.,
-         906.,  712.,   52., -132.,  202., 1404.,  418.,  538.,  614.,  472.,
-         548.,  564.,  394.,  628.,  924.,  768.,  564.,  344., 1036.,  -22.,
-         652.,  546.,  692.,  678.,  -80.,  506.,   98., -316.,  316.,  170.,
-         418.,  594.,  612.], dtype=torch.float64)
-INFO     17:24:38     [!] Result: sat
-INFO     17:24:38     [!] Runtime: 0.7985
-sat,0.7985
+INFO     00:37:37     RandomAttack(seed=153, device=cpu)
+INFO     00:37:37     PGDAttack(seed=502, device=cpu)
+INFO     00:37:37     [!] Iterations: 0
+INFO     00:37:37     adv (first 5): tensor([253.7737, 254.9597, 250.5983, 254.0954, 252.4061])
+DEBUG    00:37:37     output: tensor([ 622.,  984., 1162.,  908., 1130.,  692.,  452.,  918.,  808.,  430.,
+         708., 1362.,  822.,  450., 1216., 1074.,   -8., 1548.,  924.,  794.,
+        1266.,  562., 1408.,  878.,  634., 1154., 1322.,  578., 1350.,  780.,
+        1046.,  792.,  634.,  380., -290.,  -80.,  552., -246.,  242.,  200.,
+         220.,  608.,  378.])
+sat,0.6792
 
 onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -146,7 +143,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:37:52     [!] VNNLIB: 2700 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__185:0): Transpose()
   (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
   (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
   (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
@@ -158,9 +157,8 @@ ConvertModel(
   (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
   (Softmax_activation_10): Identity()
 )
-INFO     17:24:53     [!] VNNLIB: 2700 inputs, 43 outputs
-INFO     17:24:53     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
-INFO     17:24:53     [!] Output shape: (1, 43)
+INFO     00:37:52     [!] Input shape: (1, 3, 30, 30)
+INFO     00:37:52     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -170,18 +168,16 @@ INFO     17:24:53     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:24:53     [Failed] RandomAttack(seed=456, device=cpu)
-INFO     17:24:54     [Success] PGDAttack(seed=766, device=cpu)
-INFO     17:24:54     [!] Iterations: 0
-INFO     17:24:54     adv (first 5): tensor([248.3097, 246.9586, 243.2142, 242.6253, 234.6805], dtype=torch.float64)
-DEBUG    17:24:54     output: tensor([ 836., 1362., 1604., 1562., 1576., 1438.,  726.,  908., 1330.,  -24.,
-         802.,  660.,  192.,  -96.,  442., 1508.,  566.,  346.,  794.,  492.,
-         492.,  668.,  426.,  496.,  960.,  480.,  668.,  356.,  832.,   90.,
-         528.,  438.,  728.,  774.,   80.,  446., -194., -500.,  316.,  378.,
-         398.,  302.,  260.], dtype=torch.float64)
-INFO     17:24:54     [!] Result: sat
-INFO     17:24:54     [!] Runtime: 1.6309
-sat,1.6309
+INFO     00:37:52     RandomAttack(seed=780, device=cpu)
+INFO     00:37:52     PGDAttack(seed=206, device=cpu)
+INFO     00:37:52     [!] Iterations: 0
+INFO     00:37:52     adv (first 5): tensor([248.3451, 252.5113, 246.3214, 243.0901, 252.0594])
+DEBUG    00:37:52     output: tensor([ 580.,  994., 1088.,  842., 1136.,  654.,  406.,  888.,  922.,  480.,
+         786., 1344.,  812.,  572., 1094., 1052.,   82., 1482.,  954.,  868.,
+        1200.,  680., 1378.,  860.,  660., 1096., 1332.,  532., 1180.,  798.,
+         988.,  734.,  664.,  330., -248.,   66.,  634., -268.,  276.,   66.,
+         274.,  630.,  364.])
+sat,0.6176
 
 onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -192,7 +188,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:38:07     [!] VNNLIB: 2700 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__185:0): Transpose()
   (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
   (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
   (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
@@ -204,9 +202,8 @@ ConvertModel(
   (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
   (Softmax_activation_10): Identity()
 )
-INFO     17:25:08     [!] VNNLIB: 2700 inputs, 43 outputs
-INFO     17:25:09     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
-INFO     17:25:09     [!] Output shape: (1, 43)
+INFO     00:38:07     [!] Input shape: (1, 3, 30, 30)
+INFO     00:38:07     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -216,18 +213,16 @@ INFO     17:25:09     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:25:09     [Failed] RandomAttack(seed=687, device=cpu)
-INFO     17:25:10     [Success] PGDAttack(seed=415, device=cpu)
-INFO     17:25:10     [!] Iterations: 0
-INFO     17:25:10     adv (first 5): tensor([245.9556, 243.5803, 246.2768, 244.7963, 245.7106], dtype=torch.float64)
-DEBUG    17:25:10     output: tensor([ 416., 1414., 1652., 1494., 1416., 1398.,  714.,  928., 1134.,  312.,
-         894.,  692.,  360.,  112.,  362., 1320.,  662.,  302.,  642.,  576.,
-         600.,  440.,   98.,  712.,  724.,  612.,  432.,  252., 1040.,  170.,
-         360.,  626.,  864.,  798.,   44.,  642.,   26., -360.,  212.,  234.,
-         338.,  498.,  528.], dtype=torch.float64)
-INFO     17:25:10     [!] Result: sat
-INFO     17:25:10     [!] Runtime: 1.4692
-sat,1.4692
+INFO     00:38:07     RandomAttack(seed=471, device=cpu)
+INFO     00:38:07     PGDAttack(seed=694, device=cpu)
+INFO     00:38:07     [!] Iterations: 0
+INFO     00:38:07     adv (first 5): tensor([240.6493, 249.9858, 254.7448, 249.1253, 241.7941])
+DEBUG    00:38:07     output: tensor([ 634., 1016., 1118.,  896., 1050.,  732.,  544.,  846.,  852.,  362.,
+         772., 1478.,  786.,  450., 1076.,  978.,   24., 1508.,  936.,  734.,
+        1114.,  750., 1396.,  974.,  618., 1018., 1346.,  594., 1202.,  836.,
+         982.,  772.,  538.,  300., -150.,   24.,  624., -258.,  318.,   84.,
+         168.,  648.,  422.])
+sat,0.6044
 
 onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -238,7 +233,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:38:23     [!] VNNLIB: 2700 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__185:0): Transpose()
   (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
   (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
   (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
@@ -250,9 +247,8 @@ ConvertModel(
   (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
   (Softmax_activation_10): Identity()
 )
-INFO     17:25:24     [!] VNNLIB: 2700 inputs, 43 outputs
-INFO     17:25:24     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
-INFO     17:25:24     [!] Output shape: (1, 43)
+INFO     00:38:24     [!] Input shape: (1, 3, 30, 30)
+INFO     00:38:24     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -262,33 +258,16 @@ INFO     17:25:24     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:25:24     [Failed] RandomAttack(seed=805, device=cpu)
-INFO     17:25:29     [Failed] PGDAttack(seed=505, device=cpu)
-INFO     17:25:29     [!] eps=2.000000, perturbed=113400
-INFO     17:25:29     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:25:29     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:25:30     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:25:31     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:25:32     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:25:33     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:25:33     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:25:34     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:25:35     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:25:36     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:25:37     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:25:38     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:25:39     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:25:40     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:25:42     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:25:43     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:25:44     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:25:45     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:25:46     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:25:47     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:25:48     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:25:49     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:25:50     Try conv_mode=matrix, method=forward+backward, input_split=True
-INFO     17:25:51     [!] Initialization failed
+INFO     00:38:24     RandomAttack(seed=664, device=cpu)
+INFO     00:38:24     PGDAttack(seed=804, device=cpu)
+INFO     00:38:24     [!] Iterations: 0
+INFO     00:38:24     adv (first 5): tensor([52.9250, 62.6289, 54.1291, 69.4532, 75.9219])
+DEBUG    00:38:24     output: tensor([ 478., 1036., 1074.,  668.,  478.,  476.,  244.,  726.,  540.,  518.,
+         728.,  782.,  618.,  890.,  716.,  914.,  660.,   80.,  988.,  426.,
+         490.,  178.,  856.,  670.,  546.,  994.,  610.,  306.,  650.,  152.,
+         390.,  568.,  682., 1004.,  106.,  492.,  796.,  214., 1054.,  184.,
+         636.,  556.,  146.])
+sat,0.7532
 
 onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -299,7 +278,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:38:39     [!] VNNLIB: 2700 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__185:0): Transpose()
   (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
   (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
   (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
@@ -311,9 +292,8 @@ ConvertModel(
   (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
   (Softmax_activation_10): Identity()
 )
-INFO     17:26:06     [!] VNNLIB: 2700 inputs, 43 outputs
-INFO     17:26:06     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
-INFO     17:26:06     [!] Output shape: (1, 43)
+INFO     00:38:40     [!] Input shape: (1, 3, 30, 30)
+INFO     00:38:40     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -323,33 +303,16 @@ INFO     17:26:06     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:26:06     [Failed] RandomAttack(seed=272, device=cpu)
-INFO     17:26:12     [Failed] PGDAttack(seed=488, device=cpu)
-INFO     17:26:12     [!] eps=6.000000, perturbed=113400
-INFO     17:26:12     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:26:12     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:26:13     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:26:14     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:26:14     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:26:15     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:26:16     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:26:17     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:26:18     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:26:18     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:26:19     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:26:20     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:26:21     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:26:22     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:26:22     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:26:23     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:26:24     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:26:25     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:26:26     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:26:27     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:26:29     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:26:30     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:26:30     Try conv_mode=matrix, method=forward+backward, input_split=True
-INFO     17:26:31     [!] Initialization failed
+INFO     00:38:40     RandomAttack(seed=852, device=cpu)
+INFO     00:38:40     PGDAttack(seed=832, device=cpu)
+INFO     00:38:40     [!] Iterations: 0
+INFO     00:38:40     adv (first 5): tensor([52.5790, 62.7586, 52.0991, 67.3729, 77.1238])
+DEBUG    00:38:40     output: tensor([ 492., 1094., 1116.,  682.,  504.,  558.,  266.,  728.,  474.,  440.,
+         706.,  760.,  688.,  952.,  746.,  888.,  746.,  138.,  926.,  424.,
+         416.,  252.,  890.,  660.,  520., 1012.,  608.,  228.,  640.,  250.,
+         308.,  514.,  716.,  974.,  136.,  498.,  798.,  304., 1028.,  226.,
+         598.,  574.,   96.])
+sat,0.7325
 
 onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -360,7 +323,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:38:56     [!] VNNLIB: 2700 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__185:0): Transpose()
   (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
   (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
   (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
@@ -372,9 +337,8 @@ ConvertModel(
   (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
   (Softmax_activation_10): Identity()
 )
-INFO     17:26:47     [!] VNNLIB: 2700 inputs, 43 outputs
-INFO     17:26:48     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
-INFO     17:26:48     [!] Output shape: (1, 43)
+INFO     00:38:56     [!] Input shape: (1, 3, 30, 30)
+INFO     00:38:56     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -384,33 +348,16 @@ INFO     17:26:48     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:26:48     [Failed] RandomAttack(seed=248, device=cpu)
-INFO     17:26:53     [Failed] PGDAttack(seed=856, device=cpu)
-INFO     17:26:53     [!] eps=10.000000, perturbed=113400
-INFO     17:26:53     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:26:53     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:26:54     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:26:54     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:26:55     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:26:56     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:26:57     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:26:58     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:26:59     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:26:59     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:00     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:27:01     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:02     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:27:03     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:05     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:27:05     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:07     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:27:07     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:09     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:27:10     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:11     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:27:12     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:13     Try conv_mode=matrix, method=forward+backward, input_split=True
-INFO     17:27:14     [!] Initialization failed
+INFO     00:38:56     RandomAttack(seed=329, device=cpu)
+INFO     00:38:56     PGDAttack(seed=849, device=cpu)
+INFO     00:38:56     [!] Iterations: 0
+INFO     00:38:56     adv (first 5): tensor([56.2143, 61.2313, 50.9504, 69.6274, 73.2814])
+DEBUG    00:38:56     output: tensor([ 518., 1000., 1114.,  656.,  526.,  584.,  304.,  694.,  496.,  522.,
+         700.,  806.,  638.,  990.,  740.,  934.,  728.,   68., 1024.,  406.,
+         510.,  154.,  908.,  754.,  578.,  978.,  558.,  338.,  742.,  220.,
+         346.,  540.,  666., 1044.,   98.,  524.,  788.,  226.,  978.,  196.,
+         636.,  556.,   86.])
+sat,0.7284
 
 onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -421,7 +368,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:39:13     [!] VNNLIB: 2700 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__185:0): Transpose()
   (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
   (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
   (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
@@ -433,9 +382,8 @@ ConvertModel(
   (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
   (Softmax_activation_10): Identity()
 )
-INFO     17:27:28     [!] VNNLIB: 2700 inputs, 43 outputs
-INFO     17:27:28     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
-INFO     17:27:28     [!] Output shape: (1, 43)
+INFO     00:39:13     [!] Input shape: (1, 3, 30, 30)
+INFO     00:39:13     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -445,33 +393,16 @@ INFO     17:27:28     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:27:28     [Failed] RandomAttack(seed=727, device=cpu)
-INFO     17:27:34     [Failed] PGDAttack(seed=898, device=cpu)
-INFO     17:27:34     [!] eps=20.000000, perturbed=113400
-INFO     17:27:34     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:27:34     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:35     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:27:36     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:37     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:27:38     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:39     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:27:39     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:41     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:27:42     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:43     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:27:44     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:45     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:27:46     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:47     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:27:48     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:48     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:27:49     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:50     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:27:51     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:52     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:27:53     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:27:54     Try conv_mode=matrix, method=forward+backward, input_split=True
-INFO     17:27:55     [!] Initialization failed
+INFO     00:39:13     RandomAttack(seed=765, device=cpu)
+INFO     00:39:13     PGDAttack(seed=34, device=cpu)
+INFO     00:39:13     [!] Iterations: 0
+INFO     00:39:13     adv (first 5): tensor([59.4358, 54.3109, 58.1144, 67.6829, 80.6432])
+DEBUG    00:39:13     output: tensor([ 386., 1052., 1102.,  592.,  546.,  500.,  176.,  642.,  528.,  582.,
+         784.,  786.,  710.,  942.,  668.,  878.,  708.,   64.,  892.,  498.,
+         514.,  314.,  860.,  826.,  670., 1010.,  522.,  318.,  590.,  220.,
+         406.,  532.,  522., 1008.,    2.,  552.,  792.,  238.,  910.,   60.,
+         564.,  580.,  102.])
+sat,0.8284
 
 onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -482,7 +413,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:39:29     [!] VNNLIB: 2700 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__185:0): Transpose()
   (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
   (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
   (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
@@ -494,9 +427,8 @@ ConvertModel(
   (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
   (Softmax_activation_10): Identity()
 )
-INFO     17:28:10     [!] VNNLIB: 2700 inputs, 43 outputs
-INFO     17:28:11     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
-INFO     17:28:11     [!] Output shape: (1, 43)
+INFO     00:39:29     [!] Input shape: (1, 3, 30, 30)
+INFO     00:39:29     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -506,33 +438,16 @@ INFO     17:28:11     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:28:11     [Failed] RandomAttack(seed=825, device=cpu)
-INFO     17:28:16     [Failed] PGDAttack(seed=276, device=cpu)
-INFO     17:28:16     [!] eps=30.000000, perturbed=113400
-INFO     17:28:16     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:28:16     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:28:17     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:28:18     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:28:19     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:28:20     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:28:20     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:28:21     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:28:22     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:28:23     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:28:24     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:28:25     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:28:26     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:28:26     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:28:27     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:28:28     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:28:29     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:28:30     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:28:31     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:28:32     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:28:33     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:28:34     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:28:35     Try conv_mode=matrix, method=forward+backward, input_split=True
-INFO     17:28:36     [!] Initialization failed
+INFO     00:39:29     RandomAttack(seed=559, device=cpu)
+INFO     00:39:29     PGDAttack(seed=15, device=cpu)
+INFO     00:39:29     [!] Iterations: 0
+INFO     00:39:29     adv (first 5): tensor([45.9199, 55.2979, 62.9207, 66.6064, 88.5095])
+DEBUG    00:39:29     output: tensor([ 342., 1004., 1134.,  852.,  582.,  452.,  300.,  594.,  448.,  586.,
+         688.,  714.,  754., 1070.,  852., 1002.,  752.,   -4.,  888.,  462.,
+         526.,  162.,  920.,  814.,  462.,  970.,  574.,  210.,  650.,  116.,
+         402.,  500.,  662.,  968.,  294.,  584.,  924.,  166., 1142.,   92.,
+         652.,  652.,   66.])
+sat,0.7121
 
 onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -543,7 +458,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:39:45     [!] VNNLIB: 2700 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__185:0): Transpose()
   (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
   (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
   (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
@@ -555,9 +472,8 @@ ConvertModel(
   (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
   (Softmax_activation_10): Identity()
 )
-INFO     17:28:51     [!] VNNLIB: 2700 inputs, 43 outputs
-INFO     17:28:52     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
-INFO     17:28:52     [!] Output shape: (1, 43)
+INFO     00:39:45     [!] Input shape: (1, 3, 30, 30)
+INFO     00:39:45     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -567,33 +483,16 @@ INFO     17:28:52     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:28:52     [Failed] RandomAttack(seed=253, device=cpu)
-INFO     17:28:57     [Failed] PGDAttack(seed=551, device=cpu)
-INFO     17:28:57     [!] eps=2.000000, perturbed=113400
-INFO     17:28:57     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:28:57     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:28:58     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:28:59     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:00     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:02     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:03     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:03     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:04     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:05     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:06     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:07     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:08     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:08     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:09     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:10     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:11     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:12     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:13     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:15     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:16     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:17     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:18     Try conv_mode=matrix, method=forward+backward, input_split=True
-INFO     17:29:19     [!] Initialization failed
+INFO     00:39:45     RandomAttack(seed=247, device=cpu)
+INFO     00:39:45     PGDAttack(seed=469, device=cpu)
+INFO     00:39:45     [!] Iterations: 0
+INFO     00:39:45     adv (first 5): tensor([194.8705, 204.6129, 218.6908, 189.9570, 204.1539])
+DEBUG    00:39:45     output: tensor([ 704.,  870.,  692.,  774.,  936.,  490.,  286.,  528.,  710.,  268.,
+         438.,  848.,  976.,  732.,  634.,  844.,  -98., 1090., 1106.,  636.,
+        1028.,  448., 1070.,  780.,  532.,  904., 1124.,  764., 1208.,  446.,
+         876.,  666.,  924.,  594.,  424.,   94.,  438., -548.,  572.,  322.,
+         278.,  562.,  440.])
+sat,0.5765
 
 onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -604,7 +503,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:40:00     [!] VNNLIB: 2700 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__185:0): Transpose()
   (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
   (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
   (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
@@ -616,9 +517,8 @@ ConvertModel(
   (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
   (Softmax_activation_10): Identity()
 )
-INFO     17:29:35     [!] VNNLIB: 2700 inputs, 43 outputs
-INFO     17:29:36     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
-INFO     17:29:36     [!] Output shape: (1, 43)
+INFO     00:40:01     [!] Input shape: (1, 3, 30, 30)
+INFO     00:40:01     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -628,33 +528,16 @@ INFO     17:29:36     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:29:36     [Failed] RandomAttack(seed=923, device=cpu)
-INFO     17:29:41     [Failed] PGDAttack(seed=832, device=cpu)
-INFO     17:29:41     [!] eps=6.000000, perturbed=113400
-INFO     17:29:41     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:29:41     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:43     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:43     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:44     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:45     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:46     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:47     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:48     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:49     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:49     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:50     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:52     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:53     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:54     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:55     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:56     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:57     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:29:58     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:29:59     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:30:00     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:30:01     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:30:02     Try conv_mode=matrix, method=forward+backward, input_split=True
-INFO     17:30:03     [!] Initialization failed
+INFO     00:40:01     RandomAttack(seed=641, device=cpu)
+INFO     00:40:01     PGDAttack(seed=391, device=cpu)
+INFO     00:40:01     [!] Iterations: 0
+INFO     00:40:01     adv (first 5): tensor([196.9424, 202.3979, 220.7353, 192.7516, 205.7773])
+DEBUG    00:40:01     output: tensor([ 750.,  864.,  706.,  776.,  894.,  540.,  352.,  598.,  716.,  258.,
+         416.,  890.,  938.,  686.,  620.,  858.,  -88., 1072., 1100.,  642.,
+         942.,  450., 1052.,  754.,  534.,  930., 1114.,  790., 1262.,  460.,
+         838.,  664.,  946.,  600.,  378.,   60.,  528., -498.,  574.,  248.,
+         232.,  596.,  378.])
+sat,0.6531
 
 onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -665,7 +548,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:40:16     [!] VNNLIB: 2700 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__185:0): Transpose()
   (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
   (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
   (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
@@ -677,9 +562,8 @@ ConvertModel(
   (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
   (Softmax_activation_10): Identity()
 )
-INFO     17:30:19     [!] VNNLIB: 2700 inputs, 43 outputs
-INFO     17:30:19     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
-INFO     17:30:19     [!] Output shape: (1, 43)
+INFO     00:40:16     [!] Input shape: (1, 3, 30, 30)
+INFO     00:40:16     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -689,33 +573,16 @@ INFO     17:30:19     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:30:19     [Failed] RandomAttack(seed=711, device=cpu)
-INFO     17:30:26     [Failed] PGDAttack(seed=629, device=cpu)
-INFO     17:30:26     [!] eps=10.000000, perturbed=113400
-INFO     17:30:26     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:30:26     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:30:27     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:30:28     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:30:29     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:30:30     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:30:32     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:30:33     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:30:35     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:30:36     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:30:38     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:30:40     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:30:42     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:30:43     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:30:45     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:30:47     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:30:48     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:30:50     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:30:52     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:30:53     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:30:55     Try conv_mode=matrix, method=forward+backward, input_split=True
-DEBUG    17:30:57     Try conv_mode=patches, method=forward+backward, input_split=True
-DEBUG    17:30:58     Try conv_mode=matrix, method=forward+backward, input_split=True
-INFO     17:31:00     [!] Initialization failed
+INFO     00:40:16     RandomAttack(seed=879, device=cpu)
+INFO     00:40:16     PGDAttack(seed=79, device=cpu)
+INFO     00:40:16     [!] Iterations: 0
+INFO     00:40:16     adv (first 5): tensor([190.7104, 201.5227, 221.2526, 186.6045, 201.0033])
+DEBUG    00:40:16     output: tensor([ 722.,  896.,  654.,  652.,  870.,  476.,  288.,  566.,  748.,  266.,
+         480.,  858.,  970.,  678.,  648.,  902.,  -52., 1060., 1088.,  694.,
+        1086.,  410., 1088.,  762.,  518.,  866., 1186.,  814., 1246.,  488.,
+         834.,  604.,  978.,  604.,  394.,  104.,  492., -562.,  562.,  344.,
+         220.,  572.,  402.])
+sat,0.7342
 
 onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -726,7 +593,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:40:32     [!] VNNLIB: 2700 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__185:0): Transpose()
   (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
   (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
   (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
@@ -738,9 +607,8 @@ ConvertModel(
   (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
   (Softmax_activation_10): Identity()
 )
-INFO     17:31:20     [!] VNNLIB: 2700 inputs, 43 outputs
-INFO     17:31:21     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
-INFO     17:31:21     [!] Output shape: (1, 43)
+INFO     00:40:32     [!] Input shape: (1, 3, 30, 30)
+INFO     00:40:32     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -750,18 +618,16 @@ INFO     17:31:21     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:31:21     [Failed] RandomAttack(seed=35, device=cpu)
-INFO     17:31:24     [Success] PGDAttack(seed=561, device=cpu)
-INFO     17:31:24     [!] Iterations: 0
-INFO     17:31:24     adv (first 5): tensor([186.5013, 186.8420, 181.9273, 182.6682, 194.1665], dtype=torch.float64)
-DEBUG    17:31:24     output: tensor([ 242., 1180., 1194., 1568., 1634., 1156.,  160., 1482., 1232.,  638.,
-         560.,  366.,  186., -134.,  344., 1322.,  984.,  960.,  788.,  406.,
-         914.,  182.,  564.,  562.,  702.,  162.,  874.,  762.,  534.,  532.,
-         406.,  708.,  654.,  868.,  110.,  596.,  168.,  430.,  434.,  368.,
-         732.,   52.,  -38.], dtype=torch.float64)
-INFO     17:31:24     [!] Result: sat
-INFO     17:31:24     [!] Runtime: 4.0403
-sat,4.0403
+INFO     00:40:32     RandomAttack(seed=583, device=cpu)
+INFO     00:40:32     PGDAttack(seed=550, device=cpu)
+INFO     00:40:32     [!] Iterations: 0
+INFO     00:40:32     adv (first 5): tensor([185.4142, 196.1922, 210.7493, 192.6935, 209.0274])
+DEBUG    00:40:32     output: tensor([ 732.,  886.,  664.,  698.,  808.,  454.,  402.,  600.,  698.,  264.,
+         474.,  768., 1000.,  712.,  542.,  812.,  -98., 1062., 1114.,  648.,
+        1024.,  388., 1074.,  764.,  556.,  920., 1164.,  776., 1300.,  546.,
+         864.,  690.,  880.,  542.,  360.,   86.,  490., -480.,  608.,  298.,
+         354.,  622.,  424.])
+sat,0.6769
 
 onnx/3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -772,7 +638,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:40:47     [!] VNNLIB: 2700 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__185:0): Transpose()
   (Conv_sequential_10/quant_conv2d_20/QuantConv2D:0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
   (Transpose_sequential_10/quant_conv2d_20/QuantConv2D__187:0): Transpose()
   (Add_sequential_10/quant_conv2d_21/ste_sign_52/add:0): Add()
@@ -784,9 +652,8 @@ ConvertModel(
   (MatMul_sequential_10/quant_dense_10/MatMul:0): Linear(in_features=23328, out_features=43, bias=False)
   (Softmax_activation_10): Identity()
 )
-INFO     17:31:44     [!] VNNLIB: 2700 inputs, 43 outputs
-INFO     17:31:45     [!] Input shape: (1, 3, 30, 30) (is_nhwc=True)
-INFO     17:31:45     [!] Output shape: (1, 43)
+INFO     00:40:48     [!] Input shape: (1, 3, 30, 30)
+INFO     00:40:48     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -796,18 +663,16 @@ INFO     17:31:45     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:31:45     [Failed] RandomAttack(seed=193, device=cpu)
-INFO     17:31:48     [Success] PGDAttack(seed=575, device=cpu)
-INFO     17:31:48     [!] Iterations: 0
-INFO     17:31:48     adv (first 5): tensor([196.4036, 177.8545, 201.4330, 195.3236, 192.7571], dtype=torch.float64)
-DEBUG    17:31:48     output: tensor([ -94., 1216., 1322., 1540., 1306., 1052.,  424., 1330.,  776.,  598.,
-         768.,  338.,  154., -410.,  416., 1106., 1040.,  752.,  548.,  750.,
-        1086.,  506.,  456., 1010.,  514.,  166.,  650.,  610.,  526.,  700.,
-         154.,  428.,  470.,  928.,  -98.,  672.,  184.,  -90.,  598.,  252.,
-        1024.,   44.,  454.], dtype=torch.float64)
-INFO     17:31:48     [!] Result: sat
-INFO     17:31:48     [!] Runtime: 4.1935
-sat,4.1935
+INFO     00:40:48     RandomAttack(seed=654, device=cpu)
+INFO     00:40:48     PGDAttack(seed=675, device=cpu)
+INFO     00:40:48     [!] Iterations: 0
+INFO     00:40:48     adv (first 5): tensor([201.8564, 214.1861, 208.6992, 178.5761, 200.9754])
+DEBUG    00:40:48     output: tensor([ 672.,  742.,  740.,  742.,  892.,  478.,  442.,  544.,  466.,  428.,
+         542.,  832.,  980.,  756.,  574.,  852., -150.,  982., 1226.,  692.,
+        1092.,  440., 1046.,  796.,  432.,  924., 1100.,  944., 1348.,  490.,
+         984.,  706.,  936.,  482.,  588.,    2.,  446., -528.,  612.,  274.,
+         194.,  718.,  464.])
+sat,0.7364
 
 onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -826,7 +691,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:41:03     [!] VNNLIB: 6912 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_1/quant_conv2d_3/QuantConv2D__146:0): Transpose()
   (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
@@ -854,9 +721,8 @@ ConvertModel(
   (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
   (Softmax_activation_1): Identity()
 )
-INFO     17:32:07     [!] VNNLIB: 6912 inputs, 43 outputs
-INFO     17:32:08     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
-INFO     17:32:08     [!] Output shape: (1, 43)
+INFO     00:41:04     [!] Input shape: (1, 3, 48, 48)
+INFO     00:41:04     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -866,11 +732,15 @@ INFO     17:32:08     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:32:09     [Failed] RandomAttack(seed=673, device=cpu)
-INFO     17:32:15     [Failed] PGDAttack(seed=542, device=cpu)
-INFO     17:32:15     [!] eps=2.000000, perturbed=290304
-INFO     17:32:15     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:32:15     Try conv_mode=patches, method=forward+backward, input_split=True
+INFO     00:41:04     RandomAttack(seed=41, device=cpu)
+INFO     00:41:04     PGDAttack(seed=390, device=cpu)
+INFO     00:41:04     [!] Iterations: 0
+INFO     00:41:04     adv (first 5): tensor([254.3929, 254.4623, 254.2520, 251.7223, 254.9724])
+DEBUG    00:41:04     output: tensor([ 64.,  54., -16., -14.,   4., -30., -32.,   4., -44., -20., -38.,  -8.,
+        -12.,  34.,  22.,   6., -26., -10.,  16.,  10., -12., -10.,  22., -20.,
+         -2.,   0.,  18.,   2.,   6.,  24., -24., -38.,  20., -20., -16.,  10.,
+         -4.,  -8.,  10., -28., -16., -34., -34.])
+sat,1.6427
 
 onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -889,7 +759,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:41:18     [!] VNNLIB: 6912 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_1/quant_conv2d_3/QuantConv2D__146:0): Transpose()
   (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
@@ -917,9 +789,8 @@ ConvertModel(
   (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
   (Softmax_activation_1): Identity()
 )
-INFO     17:32:38     [!] VNNLIB: 6912 inputs, 43 outputs
-INFO     17:32:40     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
-INFO     17:32:40     [!] Output shape: (1, 43)
+INFO     00:41:20     [!] Input shape: (1, 3, 48, 48)
+INFO     00:41:20     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -929,11 +800,15 @@ INFO     17:32:40     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:32:40     [Failed] RandomAttack(seed=825, device=cpu)
-INFO     17:32:47     [Failed] PGDAttack(seed=276, device=cpu)
-INFO     17:32:47     [!] eps=6.000000, perturbed=290304
-INFO     17:32:47     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:32:47     Try conv_mode=patches, method=forward+backward, input_split=True
+INFO     00:41:20     RandomAttack(seed=528, device=cpu)
+INFO     00:41:20     PGDAttack(seed=802, device=cpu)
+INFO     00:41:20     [!] Iterations: 0
+INFO     00:41:20     adv (first 5): tensor([253.3980, 254.3048, 254.9877, 250.8573, 254.2013])
+DEBUG    00:41:20     output: tensor([ 54.,  56.,  -6.,  -4., -14., -32., -34.,  -2., -38., -10., -36.,   6.,
+          6.,  44.,  20.,   0., -32., -16.,   6.,  20., -14.,  -8.,  28., -30.,
+        -12.,  10.,  28.,  -4., -12.,  26., -18., -24.,  22., -30., -10.,   8.,
+        -14.,  -2.,  12., -18., -14., -16., -28.])
+sat,1.5817
 
 onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -952,7 +827,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:41:34     [!] VNNLIB: 6912 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_1/quant_conv2d_3/QuantConv2D__146:0): Transpose()
   (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
@@ -980,9 +857,8 @@ ConvertModel(
   (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
   (Softmax_activation_1): Identity()
 )
-INFO     17:33:11     [!] VNNLIB: 6912 inputs, 43 outputs
-INFO     17:33:13     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
-INFO     17:33:13     [!] Output shape: (1, 43)
+INFO     00:41:35     [!] Input shape: (1, 3, 48, 48)
+INFO     00:41:35     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -992,11 +868,15 @@ INFO     17:33:13     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:33:13     [Failed] RandomAttack(seed=623, device=cpu)
-INFO     17:33:20     [Failed] PGDAttack(seed=46, device=cpu)
-INFO     17:33:20     [!] eps=10.000000, perturbed=290304
-INFO     17:33:20     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:33:20     Try conv_mode=patches, method=forward+backward, input_split=True
+INFO     00:41:36     RandomAttack(seed=997, device=cpu)
+INFO     00:41:36     PGDAttack(seed=476, device=cpu)
+INFO     00:41:36     [!] Iterations: 0
+INFO     00:41:36     adv (first 5): tensor([253.4721, 252.0551, 253.1682, 253.8047, 254.3333])
+DEBUG    00:41:36     output: tensor([ 46.,  52.,   2.,   4.,   2., -24., -30.,  -2., -34., -18., -44., -10.,
+         -2.,  36.,  36.,  16., -28.,  -4.,  14.,   8., -14.,   8.,  28., -26.,
+        -12.,  -2.,  20.,   4.,  -4.,  22., -38., -28.,  18., -18., -30.,   0.,
+         -2.,  -6.,  12., -22., -14., -36., -32.])
+sat,1.5767
 
 onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -1015,7 +895,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:41:50     [!] VNNLIB: 6912 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_1/quant_conv2d_3/QuantConv2D__146:0): Transpose()
   (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
@@ -1043,9 +925,8 @@ ConvertModel(
   (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
   (Softmax_activation_1): Identity()
 )
-INFO     17:33:43     [!] VNNLIB: 6912 inputs, 43 outputs
-INFO     17:33:45     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
-INFO     17:33:45     [!] Output shape: (1, 43)
+INFO     00:41:51     [!] Input shape: (1, 3, 48, 48)
+INFO     00:41:51     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -1055,11 +936,15 @@ INFO     17:33:45     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:33:46     [Failed] RandomAttack(seed=314, device=cpu)
-INFO     17:33:52     [Failed] PGDAttack(seed=201, device=cpu)
-INFO     17:33:52     [!] eps=20.000000, perturbed=290304
-INFO     17:33:52     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:33:52     Try conv_mode=patches, method=forward+backward, input_split=True
+INFO     00:41:51     RandomAttack(seed=918, device=cpu)
+INFO     00:41:51     PGDAttack(seed=894, device=cpu)
+INFO     00:41:51     [!] Iterations: 0
+INFO     00:41:51     adv (first 5): tensor([252.8511, 249.0427, 248.2845, 253.0292, 248.1152])
+DEBUG    00:41:51     output: tensor([ 34.,  56., -10.,  24.,  -6., -12., -22.,   2., -34., -18., -32.,  -2.,
+        -10.,  48.,  20.,  -4., -40.,  -4.,  14.,   4., -14.,   0.,  32., -22.,
+          4.,  22.,  12., -12.,   4.,  14., -22., -40.,   6., -18., -26.,   0.,
+        -14., -14.,   4., -26., -22., -32.,  -8.])
+sat,1.5386
 
 onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -1078,7 +963,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:42:07     [!] VNNLIB: 6912 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_1/quant_conv2d_3/QuantConv2D__146:0): Transpose()
   (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
@@ -1106,9 +993,8 @@ ConvertModel(
   (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
   (Softmax_activation_1): Identity()
 )
-INFO     17:34:15     [!] VNNLIB: 6912 inputs, 43 outputs
-INFO     17:34:17     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
-INFO     17:34:17     [!] Output shape: (1, 43)
+INFO     00:42:08     [!] Input shape: (1, 3, 48, 48)
+INFO     00:42:08     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -1118,11 +1004,15 @@ INFO     17:34:17     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:34:17     [Failed] RandomAttack(seed=609, device=cpu)
-INFO     17:34:24     [Failed] PGDAttack(seed=645, device=cpu)
-INFO     17:34:24     [!] eps=30.000000, perturbed=290304
-INFO     17:34:24     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:34:24     Try conv_mode=patches, method=forward+backward, input_split=True
+INFO     00:42:08     RandomAttack(seed=615, device=cpu)
+INFO     00:42:08     PGDAttack(seed=236, device=cpu)
+INFO     00:42:08     [!] Iterations: 0
+INFO     00:42:08     adv (first 5): tensor([253.9384, 254.0744, 248.1623, 237.2021, 248.0308])
+DEBUG    00:42:08     output: tensor([ 28.,  58.,  16.,   2.,  -8., -30.,  -4.,  -4., -32., -24., -42.,  -8.,
+         16.,  66.,  42.,  22., -54.,   2.,   0.,  -6., -32.,  14.,  10., -36.,
+        -14.,  -4.,  -2., -14., -14.,  20., -56., -34.,  32.,  -4., -16.,   2.,
+         -8.,  -4.,  18.,  -8., -36., -46., -26.])
+sat,1.3434
 
 onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -1141,7 +1031,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:42:22     [!] VNNLIB: 6912 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_1/quant_conv2d_3/QuantConv2D__146:0): Transpose()
   (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
@@ -1169,9 +1061,8 @@ ConvertModel(
   (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
   (Softmax_activation_1): Identity()
 )
-INFO     17:34:51     [!] VNNLIB: 6912 inputs, 43 outputs
-INFO     17:34:54     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
-INFO     17:34:54     [!] Output shape: (1, 43)
+INFO     00:42:23     [!] Input shape: (1, 3, 48, 48)
+INFO     00:42:23     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -1181,11 +1072,15 @@ INFO     17:34:54     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:34:55     [Failed] RandomAttack(seed=618, device=cpu)
-INFO     17:35:03     [Failed] PGDAttack(seed=470, device=cpu)
-INFO     17:35:03     [!] eps=2.000000, perturbed=290304
-INFO     17:35:03     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:35:03     Try conv_mode=patches, method=forward+backward, input_split=True
+INFO     00:42:23     RandomAttack(seed=236, device=cpu)
+INFO     00:42:23     PGDAttack(seed=689, device=cpu)
+INFO     00:42:23     [!] Iterations: 0
+INFO     00:42:23     adv (first 5): tensor([46.1804, 58.3502, 49.8767, 52.0009, 62.0761])
+DEBUG    00:42:23     output: tensor([ 12.,  26., -36.,  38., -32., -22.,  20., -28., -28.,  12., -18.,  16.,
+         60.,  26., -34.,   2.,   2.,   6.,   4.,  10.,   8., -22., -14.,  16.,
+        -34.,  -8., -14., -30., -18., -16.,   8.,  38.,  36., -40.,  36.,  -2.,
+          8.,  -4.,  50., -12.,  20.,  22., -14.])
+sat,1.3438
 
 onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -1204,7 +1099,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:42:36     [!] VNNLIB: 6912 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_1/quant_conv2d_3/QuantConv2D__146:0): Transpose()
   (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
@@ -1232,9 +1129,8 @@ ConvertModel(
   (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
   (Softmax_activation_1): Identity()
 )
-INFO     17:35:28     [!] VNNLIB: 6912 inputs, 43 outputs
-INFO     17:35:31     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
-INFO     17:35:31     [!] Output shape: (1, 43)
+INFO     00:42:38     [!] Input shape: (1, 3, 48, 48)
+INFO     00:42:38     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -1244,11 +1140,15 @@ INFO     17:35:31     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:35:31     [Failed] RandomAttack(seed=315, device=cpu)
-INFO     17:35:39     [Failed] PGDAttack(seed=419, device=cpu)
-INFO     17:35:39     [!] eps=6.000000, perturbed=290304
-INFO     17:35:39     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:35:39     Try conv_mode=patches, method=forward+backward, input_split=True
+INFO     00:42:38     RandomAttack(seed=730, device=cpu)
+INFO     00:42:38     PGDAttack(seed=310, device=cpu)
+INFO     00:42:38     [!] Iterations: 0
+INFO     00:42:38     adv (first 5): tensor([47.2457, 56.2650, 47.9214, 54.7667, 63.2249])
+DEBUG    00:42:38     output: tensor([ 18.,  -4., -50.,  20., -50., -28.,   6., -14., -42.,  18., -32.,   2.,
+         54.,  52., -32.,  16.,   0.,  12.,   6.,   8., -22., -20.,  -4.,  10.,
+         -8.,  -6., -12., -56.,  -4.,  -2.,  14.,  24.,  30., -30.,  34.,   4.,
+         -2.,  -2.,  28.,  -2.,  22.,  24., -12.])
+sat,1.3408
 
 onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -1267,7 +1167,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:42:51     [!] VNNLIB: 6912 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_1/quant_conv2d_3/QuantConv2D__146:0): Transpose()
   (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
@@ -1295,9 +1197,8 @@ ConvertModel(
   (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
   (Softmax_activation_1): Identity()
 )
-INFO     17:36:04     [!] VNNLIB: 6912 inputs, 43 outputs
-INFO     17:36:06     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
-INFO     17:36:06     [!] Output shape: (1, 43)
+INFO     00:42:52     [!] Input shape: (1, 3, 48, 48)
+INFO     00:42:52     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -1307,11 +1208,15 @@ INFO     17:36:06     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:36:06     [Failed] RandomAttack(seed=630, device=cpu)
-INFO     17:36:14     [Failed] PGDAttack(seed=466, device=cpu)
-INFO     17:36:14     [!] eps=10.000000, perturbed=290304
-INFO     17:36:14     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:36:14     Try conv_mode=patches, method=forward+backward, input_split=True
+INFO     00:42:52     RandomAttack(seed=426, device=cpu)
+INFO     00:42:52     PGDAttack(seed=167, device=cpu)
+INFO     00:42:52     [!] Iterations: 0
+INFO     00:42:52     adv (first 5): tensor([51.8503, 62.9098, 47.6957, 48.7755, 58.5316])
+DEBUG    00:42:52     output: tensor([  6.,   8.,  -6.,   4., -42., -28.,  10., -58., -14.,  18.,  -4.,  14.,
+         54.,  56., -24.,  12., -36.,  -4.,   6.,  16.,  -6.,  -4.,   0.,  26.,
+        -16.,  -2.,  -8., -52., -36.,  18.,   6.,  52.,  18., -26.,  10., -16.,
+          6.,   2.,  40.,  14.,   6.,  12., -24.])
+sat,1.3404
 
 onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -1330,7 +1235,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:43:06     [!] VNNLIB: 6912 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_1/quant_conv2d_3/QuantConv2D__146:0): Transpose()
   (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
@@ -1358,9 +1265,8 @@ ConvertModel(
   (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
   (Softmax_activation_1): Identity()
 )
-INFO     17:36:40     [!] VNNLIB: 6912 inputs, 43 outputs
-INFO     17:36:42     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
-INFO     17:36:42     [!] Output shape: (1, 43)
+INFO     00:43:07     [!] Input shape: (1, 3, 48, 48)
+INFO     00:43:07     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -1370,11 +1276,15 @@ INFO     17:36:42     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:36:43     [Failed] RandomAttack(seed=570, device=cpu)
-INFO     17:36:50     [Failed] PGDAttack(seed=78, device=cpu)
-INFO     17:36:50     [!] eps=20.000000, perturbed=290304
-INFO     17:36:50     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:36:50     Try conv_mode=patches, method=forward+backward, input_split=True
+INFO     00:43:07     RandomAttack(seed=794, device=cpu)
+INFO     00:43:07     PGDAttack(seed=315, device=cpu)
+INFO     00:43:07     [!] Iterations: 0
+INFO     00:43:07     adv (first 5): tensor([54.3973, 68.2537, 49.3271, 50.7693, 56.4589])
+DEBUG    00:43:07     output: tensor([ -2.,   0.,  -2.,  -4., -54., -20.,   6., -22., -10.,  14., -16.,  14.,
+         70.,  52., -52.,  12., -24.,  -8.,  18.,   8., -10., -24.,   0.,   6.,
+        -28., -14.,   4., -32., -20., -22.,  34.,  16.,  42., -26.,  34.,   4.,
+          6.,  22.,  40.,  26.,  30.,  28., -28.])
+sat,1.3495
 
 onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -1393,7 +1303,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:43:21     [!] VNNLIB: 6912 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_1/quant_conv2d_3/QuantConv2D__146:0): Transpose()
   (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
@@ -1421,9 +1333,8 @@ ConvertModel(
   (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
   (Softmax_activation_1): Identity()
 )
-INFO     17:37:16     [!] VNNLIB: 6912 inputs, 43 outputs
-INFO     17:37:19     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
-INFO     17:37:19     [!] Output shape: (1, 43)
+INFO     00:43:22     [!] Input shape: (1, 3, 48, 48)
+INFO     00:43:22     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -1433,11 +1344,15 @@ INFO     17:37:19     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:37:20     [Failed] RandomAttack(seed=728, device=cpu)
-INFO     17:37:28     [Failed] PGDAttack(seed=940, device=cpu)
-INFO     17:37:28     [!] eps=30.000000, perturbed=290304
-INFO     17:37:28     Params of 1-th run: {'input_split': True, 'abstract_method': 'forward+backward', 'decision_method': 'smart', 'decision_topk': 1}
-DEBUG    17:37:28     Try conv_mode=patches, method=forward+backward, input_split=True
+INFO     00:43:22     RandomAttack(seed=383, device=cpu)
+INFO     00:43:22     PGDAttack(seed=528, device=cpu)
+INFO     00:43:22     [!] Iterations: 0
+INFO     00:43:22     adv (first 5): tensor([49.8853, 67.0361, 46.2876, 56.2310, 76.8862])
+DEBUG    00:43:22     output: tensor([ 26.,   8., -18.,  -8., -26., -28.,  14., -46., -10.,  14., -24.,   6.,
+         70.,  52., -32.,  -8., -28.,   4.,  -2.,  20., -10.,  -4.,  20.,  22.,
+        -16.,  -2., -20., -44., -24.,   6.,  30.,  44.,   6., -18.,  30., -28.,
+          6.,  26.,  60.,  18.,  10.,   0., -32.])
+sat,1.3509
 
 onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -1456,7 +1371,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:43:35     [!] VNNLIB: 6912 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_1/quant_conv2d_3/QuantConv2D__146:0): Transpose()
   (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
@@ -1484,9 +1401,8 @@ ConvertModel(
   (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
   (Softmax_activation_1): Identity()
 )
-INFO     17:37:55     [!] VNNLIB: 6912 inputs, 43 outputs
-INFO     17:37:57     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
-INFO     17:37:57     [!] Output shape: (1, 43)
+INFO     00:43:36     [!] Input shape: (1, 3, 48, 48)
+INFO     00:43:36     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -1496,17 +1412,15 @@ INFO     17:37:57     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:37:58     [Failed] RandomAttack(seed=193, device=cpu)
-INFO     17:38:05     [Success] PGDAttack(seed=575, device=cpu)
-INFO     17:38:05     [!] Iterations: 0
-INFO     17:38:05     adv (first 5): tensor([194.4600, 191.7126, 190.4500, 189.2178, 192.5567], dtype=torch.float64)
-DEBUG    17:38:05     output: tensor([ 24.,  38., -80.,  22.,  76.,  14., -24.,  40.,  12.,   8.,  10.,   0.,
-        -32., -38.,  -2., -10.,  26., -14.,  52., -14.,  16.,  22., -42., -16.,
-         38., -44.,  34.,   6.,   6.,   8., -16.,  10.,   8.,   0.,   4.,  -2.,
-        -28.,  12., -34., -44.,  16., -26.,  26.], dtype=torch.float64)
-INFO     17:38:05     [!] Result: sat
-INFO     17:38:05     [!] Runtime: 10.5907
-sat,10.5907
+INFO     00:43:36     RandomAttack(seed=806, device=cpu)
+INFO     00:43:36     PGDAttack(seed=945, device=cpu)
+INFO     00:43:36     [!] Iterations: 0
+INFO     00:43:36     adv (first 5): tensor([193.7141, 201.7860, 215.4361, 191.9082, 202.0477])
+DEBUG    00:43:36     output: tensor([ 52.,  38., -56., -54.,  12., -42., -20.,  -4.,  -8., -16., -46.,  -8.,
+         -4.,  58.,  18., -30., -26.,  34.,   0.,  42.,  -8.,  38.,  14.,  -8.,
+         18.,  20.,  38., -10.,  14.,  32.,   4., -10.,  16.,   0.,  -4., -10.,
+        -28.,   4.,  14., -16., -12., -26., -22.])
+sat,1.3449
 
 onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -1525,7 +1439,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:43:50     [!] VNNLIB: 6912 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_1/quant_conv2d_3/QuantConv2D__146:0): Transpose()
   (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
@@ -1553,9 +1469,8 @@ ConvertModel(
   (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
   (Softmax_activation_1): Identity()
 )
-INFO     17:38:24     [!] VNNLIB: 6912 inputs, 43 outputs
-INFO     17:38:27     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
-INFO     17:38:27     [!] Output shape: (1, 43)
+INFO     00:43:51     [!] Input shape: (1, 3, 48, 48)
+INFO     00:43:51     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -1565,17 +1480,15 @@ INFO     17:38:27     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:38:27     [Failed] RandomAttack(seed=838, device=cpu)
-INFO     17:38:27     [Success] PGDAttack(seed=520, device=cpu)
-INFO     17:38:27     [!] Iterations: 0
-INFO     17:38:27     adv (first 5): tensor([191.7876, 194.1107, 187.9669, 191.0527, 193.3935], dtype=torch.float64)
-DEBUG    17:38:27     output: tensor([ 56.,  50., -52.,  -6.,  76.,  38.,  -4.,  52.,  36., -12., -14., -12.,
-        -16., -50.,   2.,  -2.,  14., -18.,  44., -10., -12.,  30., -30., -24.,
-         30., -60.,  30.,  14., -10.,  12., -12., -14.,  24., -16.,  -4., -26.,
-        -20.,  16., -26., -28.,  20., -46.,  18.], dtype=torch.float64)
-INFO     17:38:27     [!] Result: sat
-INFO     17:38:27     [!] Runtime: 2.9941
-sat,2.9941
+INFO     00:43:51     RandomAttack(seed=501, device=cpu)
+INFO     00:43:51     PGDAttack(seed=654, device=cpu)
+INFO     00:43:51     [!] Iterations: 0
+INFO     00:43:51     adv (first 5): tensor([196.2804, 203.9601, 213.1051, 193.6061, 202.8834])
+DEBUG    00:43:51     output: tensor([ 40.,  50., -56., -54.,  32., -58., -40., -12.,  -4.,  -4., -46., -16.,
+        -16.,  46.,  34., -26., -34.,  34.,   8.,  14.,   4.,  30.,   6., -40.,
+         14.,  32.,  38.,  -6.,   2.,  20.,  -8., -22.,  -4.,  24.,  -4.,   2.,
+        -12.,  12.,  14., -24.,  -4., -30., -30.])
+sat,1.3440
 
 onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -1594,7 +1507,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:44:05     [!] VNNLIB: 6912 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_1/quant_conv2d_3/QuantConv2D__146:0): Transpose()
   (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
@@ -1622,9 +1537,8 @@ ConvertModel(
   (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
   (Softmax_activation_1): Identity()
 )
-INFO     17:38:48     [!] VNNLIB: 6912 inputs, 43 outputs
-INFO     17:38:50     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
-INFO     17:38:50     [!] Output shape: (1, 43)
+INFO     00:44:06     [!] Input shape: (1, 3, 48, 48)
+INFO     00:44:06     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -1634,17 +1548,15 @@ INFO     17:38:50     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:38:50     [Failed] RandomAttack(seed=191, device=cpu)
-INFO     17:38:51     [Success] PGDAttack(seed=777, device=cpu)
-INFO     17:38:51     [!] Iterations: 0
-INFO     17:38:51     adv (first 5): tensor([189.8192, 191.9114, 189.0329, 188.8592, 195.8132], dtype=torch.float64)
-DEBUG    17:38:51     output: tensor([ 42.,   4., -70., -24.,  38.,   4., -14.,  66.,  74.,  -2.,   8., -10.,
-         -2., -36.,   0., -12.,  16., -16.,   6., -12.,  18.,  24., -28., -14.,
-         36., -54.,  32., -16.,   0.,  22.,  14.,   4.,  10.,   2.,  10.,  -8.,
-        -18.,   6., -24., -26.,  42., -44.,  36.], dtype=torch.float64)
-INFO     17:38:51     [!] Result: sat
-INFO     17:38:51     [!] Runtime: 3.3450
-sat,3.3450
+INFO     00:44:06     RandomAttack(seed=504, device=cpu)
+INFO     00:44:06     PGDAttack(seed=474, device=cpu)
+INFO     00:44:06     [!] Iterations: 0
+INFO     00:44:06     adv (first 5): tensor([198.3262, 203.5142, 214.1371, 193.2123, 206.2212])
+DEBUG    00:44:06     output: tensor([ 30.,  36., -50., -60.,  10., -48., -30.,  14.,  14., -10., -56.,  -6.,
+          2.,  60.,  16., -24.,  -8.,  40.,   2.,  24.,  14.,  32.,   0., -18.,
+         20.,   6.,  28.,  -4.,  16.,   2.,  -2., -12.,  14.,   2., -26.,  -4.,
+        -14.,   6.,   4., -22.,   2., -20., -16.])
+sat,1.3501
 
 onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -1663,7 +1575,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:44:19     [!] VNNLIB: 6912 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_1/quant_conv2d_3/QuantConv2D__146:0): Transpose()
   (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
@@ -1691,9 +1605,8 @@ ConvertModel(
   (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
   (Softmax_activation_1): Identity()
 )
-INFO     17:39:10     [!] VNNLIB: 6912 inputs, 43 outputs
-INFO     17:39:12     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
-INFO     17:39:12     [!] Output shape: (1, 43)
+INFO     00:44:20     [!] Input shape: (1, 3, 48, 48)
+INFO     00:44:20     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -1703,17 +1616,15 @@ INFO     17:39:12     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:39:13     [Failed] RandomAttack(seed=272, device=cpu)
-INFO     17:39:13     [Success] PGDAttack(seed=488, device=cpu)
-INFO     17:39:13     [!] Iterations: 0
-INFO     17:39:13     adv (first 5): tensor([186.2804, 184.1315, 183.9879, 188.6024, 197.8378], dtype=torch.float64)
-DEBUG    17:39:13     output: tensor([ 34.,  40., -50.,   0.,  42.,   8., -22.,  46.,  62.,  -6.,  12.,  10.,
-        -18., -52.,   4., -20.,  20.,  -8.,  26., -32.,  34.,  16., -24., -10.,
-         24., -46.,  40.,   0.,  12.,  18.,  22.,  24.,   6., -14.,  -6., -24.,
-        -30.,   6.,   4., -42.,  10., -40.,  20.], dtype=torch.float64)
-INFO     17:39:13     [!] Result: sat
-INFO     17:39:13     [!] Runtime: 2.8709
-sat,2.8709
+INFO     00:44:21     RandomAttack(seed=399, device=cpu)
+INFO     00:44:21     PGDAttack(seed=36, device=cpu)
+INFO     00:44:21     [!] Iterations: 0
+INFO     00:44:21     adv (first 5): tensor([193.9568, 200.7117, 205.2648, 192.2184, 208.1650])
+DEBUG    00:44:21     output: tensor([ 38.,  32., -54., -20., -10., -52., -30., -14., -10., -30., -52., -22.,
+         18.,  80.,  36., -36., -24.,  44.,  -2.,  20., -14.,  36., -16., -46.,
+         -4.,  10.,  24.,   0., -12.,  42., -14.,  -8.,  22.,  10.,   2.,  16.,
+         -6.,   6.,  20., -18.,  -2., -20., -36.])
+sat,1.3481
 
 onnx/3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -1732,7 +1643,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:44:34     [!] VNNLIB: 6912 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_1/quant_conv2d_3/QuantConv2D__146:0): Transpose()
   (Conv_sequential_1/quant_conv2d_3/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_1/max_pooling2d_2/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_1/batch_normalization_3/FusedBatchNormV3:0): BatchNormWrapper(
@@ -1760,9 +1673,8 @@ ConvertModel(
   (MatMul_sequential_1/quant_dense_2/MatMul:0): Linear(in_features=256, out_features=43, bias=False)
   (Softmax_activation_1): Identity()
 )
-INFO     17:39:31     [!] VNNLIB: 6912 inputs, 43 outputs
-INFO     17:39:32     [!] Input shape: (1, 3, 48, 48) (is_nhwc=True)
-INFO     17:39:32     [!] Output shape: (1, 43)
+INFO     00:44:35     [!] Input shape: (1, 3, 48, 48)
+INFO     00:44:35     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -1772,17 +1684,15 @@ INFO     17:39:32     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:39:33     [Failed] RandomAttack(seed=961, device=cpu)
-INFO     17:39:37     [Success] PGDAttack(seed=656, device=cpu)
-INFO     17:39:37     [!] Iterations: 0
-INFO     17:39:37     adv (first 5): tensor([182.5237, 186.1274, 188.2749, 199.8075, 181.3734], dtype=torch.float64)
-DEBUG    17:39:37     output: tensor([ 48.,  66., -48.,  22.,  80.,  38.,  28.,  32.,  36., -16., -10.,  -4.,
-        -24., -38., -10., -22.,  10., -14.,  28., -34.,   4.,  -2., -26., -20.,
-         14., -32.,  26.,  14.,  -2.,  12., -40.,   2.,  32.,  -8.,  12., -22.,
-          8.,  -8., -14., -52.,   8., -38.,  38.], dtype=torch.float64)
-INFO     17:39:37     [!] Result: sat
-INFO     17:39:37     [!] Runtime: 7.1512
-sat,7.1512
+INFO     00:44:35     RandomAttack(seed=504, device=cpu)
+INFO     00:44:35     PGDAttack(seed=474, device=cpu)
+INFO     00:44:35     [!] Iterations: 0
+INFO     00:44:35     adv (first 5): tensor([206.9785, 206.5425, 212.4112, 195.6369, 212.6637])
+DEBUG    00:44:35     output: tensor([ 38.,  60., -22., -44.,  -6., -28., -18., -10.,   6., -34., -60., -10.,
+          2.,  68.,  20., -20., -24.,  32.,  -2.,  20., -10.,  24.,  -4., -42.,
+         -8.,  18.,  24.,  -8.,  -4.,  18., -14., -24.,  30., -14.,   2., -16.,
+          6.,   2.,  32., -22., -10., -12., -24.])
+sat,1.3497
 
 onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -1801,7 +1711,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:44:49     [!] VNNLIB: 12288 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_4/quant_conv2d_12/QuantConv2D__103:0): Transpose()
   (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
@@ -1833,9 +1745,8 @@ ConvertModel(
   (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
   (Softmax_activation_4): Identity()
 )
-INFO     17:39:57     [!] VNNLIB: 12288 inputs, 43 outputs
-INFO     17:40:01     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
-INFO     17:40:01     [!] Output shape: (1, 43)
+INFO     00:44:51     [!] Input shape: (1, 3, 64, 64)
+INFO     00:44:51     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -1845,8 +1756,16 @@ INFO     17:40:01     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:40:02     [Failed] RandomAttack(seed=457, device=cpu)
-killed
+INFO     00:44:51     RandomAttack(seed=86, device=cpu)
+INFO     00:44:51     PGDAttack(seed=810, device=cpu)
+INFO     00:44:52     [!] Iterations: 0
+INFO     00:44:52     adv (first 5): tensor([254.3708, 254.6517, 254.3647, 253.8039, 254.4542])
+DEBUG    00:44:52     output: tensor([   0.,   66.,    8.,   78.,  -34.,   88.,   -6.,   34.,  -70.,   16.,
+         -44.,  -90.,  -78.,   18.,  -42.,  -52.,  -80.,   40.,  138.,    2.,
+         -62.,  -30.,  -40.,  -78.,   18.,   48.,  -18.,  -60.,   34.,   48.,
+         -54.,  118.,   -6.,    0.,  -16.,   -4.,   -8.,    8.,   36.,  -42.,
+          14.,  -60., -100.])
+sat,3.5344
 
 onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -1865,7 +1784,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:45:06     [!] VNNLIB: 12288 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_4/quant_conv2d_12/QuantConv2D__103:0): Transpose()
   (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
@@ -1897,9 +1818,8 @@ ConvertModel(
   (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
   (Softmax_activation_4): Identity()
 )
-INFO     17:40:27     [!] VNNLIB: 12288 inputs, 43 outputs
-INFO     17:40:30     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
-INFO     17:40:30     [!] Output shape: (1, 43)
+INFO     00:45:08     [!] Input shape: (1, 3, 64, 64)
+INFO     00:45:08     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -1909,8 +1829,16 @@ INFO     17:40:30     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:40:30     [Failed] RandomAttack(seed=29, device=cpu)
-killed
+INFO     00:45:08     RandomAttack(seed=939, device=cpu)
+INFO     00:45:08     PGDAttack(seed=939, device=cpu)
+INFO     00:45:08     [!] Iterations: 0
+INFO     00:45:08     adv (first 5): tensor([253.0213, 253.2987, 252.1113, 252.3693, 254.7524])
+DEBUG    00:45:08     output: tensor([ -10.,   68.,   30.,   92.,  -32.,   70.,  -68.,   24., -108.,   38.,
+          10., -104.,  -56.,   32.,  -76.,  -62.,  -62.,   78.,   80.,   48.,
+         -80.,  -20.,  -34., -104.,  -24.,   78.,  -24.,  -98.,   12.,    6.,
+         -44.,  120.,  -24.,   22.,   10.,   -2.,  -10.,  -22.,   50.,  -32.,
+          16.,  -54., -102.])
+sat,2.4835
 
 onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -1929,7 +1857,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:45:21     [!] VNNLIB: 12288 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_4/quant_conv2d_12/QuantConv2D__103:0): Transpose()
   (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
@@ -1961,9 +1891,8 @@ ConvertModel(
   (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
   (Softmax_activation_4): Identity()
 )
-INFO     17:40:53     [!] VNNLIB: 12288 inputs, 43 outputs
-INFO     17:40:57     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
-INFO     17:40:57     [!] Output shape: (1, 43)
+INFO     00:45:23     [!] Input shape: (1, 3, 64, 64)
+INFO     00:45:23     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -1973,8 +1902,16 @@ INFO     17:40:57     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:40:58     [Failed] RandomAttack(seed=139, device=cpu)
-killed
+INFO     00:45:24     RandomAttack(seed=476, device=cpu)
+INFO     00:45:24     PGDAttack(seed=509, device=cpu)
+INFO     00:45:25     [!] Iterations: 0
+INFO     00:45:25     adv (first 5): tensor([253.8556, 253.0152, 252.6796, 249.7252, 254.1823])
+DEBUG    00:45:25     output: tensor([ -26.,   24.,   18.,  108.,  -44.,   70.,  -56.,  -20.,  -48.,   42.,
+           2., -108.,  -60.,   52.,  -36.,  -42., -114.,   38.,  132.,   28.,
+         -80.,  -48.,  -22.,  -40.,    4.,   46.,  -20.,  -98.,   36.,   70.,
+         -24.,  136.,  -64.,    6.,  -14.,   10.,    2.,  -22.,   46.,  -64.,
+         -16.,  -50., -146.])
+sat,3.5024
 
 onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -1993,7 +1930,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:45:38     [!] VNNLIB: 12288 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_4/quant_conv2d_12/QuantConv2D__103:0): Transpose()
   (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
@@ -2025,9 +1964,8 @@ ConvertModel(
   (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
   (Softmax_activation_4): Identity()
 )
-INFO     17:41:21     [!] VNNLIB: 12288 inputs, 43 outputs
-INFO     17:41:24     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
-INFO     17:41:24     [!] Output shape: (1, 43)
+INFO     00:45:40     [!] Input shape: (1, 3, 64, 64)
+INFO     00:45:40     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -2037,8 +1975,16 @@ INFO     17:41:24     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:41:25     [Failed] RandomAttack(seed=673, device=cpu)
-killed
+INFO     00:45:40     RandomAttack(seed=501, device=cpu)
+INFO     00:45:40     PGDAttack(seed=654, device=cpu)
+INFO     00:45:42     [!] Iterations: 0
+INFO     00:45:42     adv (first 5): tensor([254.5298, 245.5958, 245.3376, 254.7810, 247.0270])
+DEBUG    00:45:42     output: tensor([ -46.,   24.,   14.,  116.,  -60.,   26.,  -60.,   -4., -104.,   66.,
+          -6.,  -92.,  -76.,   28.,  -68.,  -58., -122.,   66.,  152.,    4.,
+         -28.,  -48.,  -18.,  -52.,    0.,   34.,  -16.,  -82.,   64.,   30.,
+         -48.,   92.,    8.,   34.,   -2.,    6.,   50.,  -22.,   62.,  -36.,
+          44.,  -18.,  -78.])
+sat,3.5833
 
 onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -2057,7 +2003,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:45:55     [!] VNNLIB: 12288 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_4/quant_conv2d_12/QuantConv2D__103:0): Transpose()
   (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
@@ -2089,9 +2037,8 @@ ConvertModel(
   (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
   (Softmax_activation_4): Identity()
 )
-INFO     17:41:52     [!] VNNLIB: 12288 inputs, 43 outputs
-INFO     17:41:56     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
-INFO     17:41:56     [!] Output shape: (1, 43)
+INFO     00:45:57     [!] Input shape: (1, 3, 64, 64)
+INFO     00:45:57     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -2101,8 +2048,16 @@ INFO     17:41:56     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:41:57     [Failed] RandomAttack(seed=193, device=cpu)
-killed
+INFO     00:45:57     RandomAttack(seed=371, device=cpu)
+INFO     00:45:57     PGDAttack(seed=318, device=cpu)
+INFO     00:45:58     [!] Iterations: 0
+INFO     00:45:58     adv (first 5): tensor([250.8262, 254.5741, 241.4851, 240.6509, 246.0060])
+DEBUG    00:45:58     output: tensor([ -26.,   28.,   30.,   60.,  -36.,   26.,  -56.,  -28., -120.,   62.,
+         -22.,  -84.,  -60.,   40.,  -72.,  -98.,  -86.,   94.,  144.,   64.,
+         -52.,  -44.,   -6.,  -40.,   -4.,   54.,    8.,  -34.,   52.,   30.,
+         -56.,   64.,    0.,   14.,   -2.,   -2.,   46.,  -10.,   66.,  -48.,
+          16.,   10.,  -82.])
+sat,3.5172
 
 onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -2121,7 +2076,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:46:12     [!] VNNLIB: 12288 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_4/quant_conv2d_12/QuantConv2D__103:0): Transpose()
   (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
@@ -2153,9 +2110,8 @@ ConvertModel(
   (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
   (Softmax_activation_4): Identity()
 )
-INFO     17:42:20     [!] VNNLIB: 12288 inputs, 43 outputs
-INFO     17:42:22     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
-INFO     17:42:22     [!] Output shape: (1, 43)
+INFO     00:46:14     [!] Input shape: (1, 3, 64, 64)
+INFO     00:46:14     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -2165,8 +2121,16 @@ INFO     17:42:22     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:42:22     [Failed] RandomAttack(seed=595, device=cpu)
-killed
+INFO     00:46:14     RandomAttack(seed=172, device=cpu)
+INFO     00:46:14     PGDAttack(seed=360, device=cpu)
+INFO     00:46:14     [!] Iterations: 0
+INFO     00:46:14     adv (first 5): tensor([44.8624, 58.1303, 48.0610, 47.8710, 61.1852])
+DEBUG    00:46:14     output: tensor([  56.,   22.,  112.,   66.,   18.,   20.,   38.,    6.,   -6.,   12.,
+         -32., -154.,   42.,   74.,   46.,   20.,  -44.,    4.,   70.,   26.,
+          -6.,  -42.,  -40.,  -94.,   14.,  -44.,    6.,  -96.,   50.,  -60.,
+         -30.,   66.,   90.,    8.,  -52.,   -4.,  -56.,   96.,  -76.,   42.,
+         -66.,   12.,  -44.])
+sat,2.4345
 
 onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -2185,7 +2149,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:46:28     [!] VNNLIB: 12288 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_4/quant_conv2d_12/QuantConv2D__103:0): Transpose()
   (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
@@ -2217,9 +2183,8 @@ ConvertModel(
   (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
   (Softmax_activation_4): Identity()
 )
-INFO     17:42:41     [!] VNNLIB: 12288 inputs, 43 outputs
-INFO     17:42:43     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
-INFO     17:42:43     [!] Output shape: (1, 43)
+INFO     00:46:30     [!] Input shape: (1, 3, 64, 64)
+INFO     00:46:30     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -2229,8 +2194,16 @@ INFO     17:42:43     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:42:44     [Failed] RandomAttack(seed=590, device=cpu)
-killed
+INFO     00:46:30     RandomAttack(seed=86, device=cpu)
+INFO     00:46:30     PGDAttack(seed=810, device=cpu)
+INFO     00:46:30     [!] Iterations: 0
+INFO     00:46:30     adv (first 5): tensor([44.7962, 59.0341, 47.9039, 48.6283, 59.0077])
+DEBUG    00:46:30     output: tensor([  40.,   10.,    0.,   74.,   -6.,   28.,   50.,  -30.,  -46.,   60.,
+         -32., -122.,   18.,   86.,   54.,  -12.,  -24.,    0.,   82.,   10.,
+          42.,  -58.,  -44.,  -30.,   38.,   24.,   26., -124.,   54.,  -20.,
+         -10.,  102.,   82.,   16.,  -48.,  -28.,  -64.,   92.,  -52.,   42.,
+         -98.,   -4.,  -48.])
+sat,2.4035
 
 onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -2249,7 +2222,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:46:43     [!] VNNLIB: 12288 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_4/quant_conv2d_12/QuantConv2D__103:0): Transpose()
   (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
@@ -2281,9 +2256,8 @@ ConvertModel(
   (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
   (Softmax_activation_4): Identity()
 )
-INFO     17:43:02     [!] VNNLIB: 12288 inputs, 43 outputs
-INFO     17:43:05     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
-INFO     17:43:05     [!] Output shape: (1, 43)
+INFO     00:46:45     [!] Input shape: (1, 3, 64, 64)
+INFO     00:46:45     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -2293,8 +2267,16 @@ INFO     17:43:05     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:43:05     [Failed] RandomAttack(seed=355, device=cpu)
-killed
+INFO     00:46:46     RandomAttack(seed=19, device=cpu)
+INFO     00:46:46     PGDAttack(seed=693, device=cpu)
+INFO     00:46:46     [!] Iterations: 0
+INFO     00:46:46     adv (first 5): tensor([40.7210, 58.0557, 44.8761, 43.1062, 56.1010])
+DEBUG    00:46:46     output: tensor([  28.,   34.,  -16.,   50.,    2.,   36.,   38.,  -18.,  -34.,   84.,
+         -20., -130.,   62.,  118.,   38.,  -12.,  -36.,   52.,   90.,   26.,
+         -14.,  -46.,  -80.,  -30.,   -6.,    8.,   14., -132.,   54.,  -32.,
+         -94.,   50.,   58.,   40.,  -28.,  -32.,  -48.,   68.,  -20.,  -10.,
+         -22.,   56.,  -96.])
+sat,2.4154
 
 onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -2313,7 +2295,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:46:59     [!] VNNLIB: 12288 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_4/quant_conv2d_12/QuantConv2D__103:0): Transpose()
   (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
@@ -2345,9 +2329,8 @@ ConvertModel(
   (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
   (Softmax_activation_4): Identity()
 )
-INFO     17:43:24     [!] VNNLIB: 12288 inputs, 43 outputs
-INFO     17:43:26     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
-INFO     17:43:26     [!] Output shape: (1, 43)
+INFO     00:47:01     [!] Input shape: (1, 3, 64, 64)
+INFO     00:47:01     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -2357,8 +2340,16 @@ INFO     17:43:26     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:43:26     [Failed] RandomAttack(seed=60, device=cpu)
-killed 
+INFO     00:47:01     RandomAttack(seed=691, device=cpu)
+INFO     00:47:01     PGDAttack(seed=705, device=cpu)
+INFO     00:47:01     [!] Iterations: 0
+INFO     00:47:01     adv (first 5): tensor([46.2544, 51.0824, 58.1873, 54.1141, 63.0135])
+DEBUG    00:47:01     output: tensor([  24.,   18.,   36.,   18.,  -62.,   24.,   50.,  -74.,  -18.,   76.,
+         -40., -126.,   58.,  134.,   18.,    4.,   -8.,   40.,   66.,   34.,
+          -6.,  -74.,  -52.,  -18.,   18.,  -36.,   50., -128.,   34.,  -24.,
+          -6.,   62.,   74.,    4.,    4.,   -8.,  -52.,   80.,  -48.,   50.,
+         -62.,   92.,  -88.])
+sat,2.3819
 
 onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -2377,7 +2368,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:47:15     [!] VNNLIB: 12288 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_4/quant_conv2d_12/QuantConv2D__103:0): Transpose()
   (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
@@ -2409,9 +2402,8 @@ ConvertModel(
   (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
   (Softmax_activation_4): Identity()
 )
-INFO     17:43:46     [!] VNNLIB: 12288 inputs, 43 outputs
-INFO     17:43:48     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
-INFO     17:43:48     [!] Output shape: (1, 43)
+INFO     00:47:17     [!] Input shape: (1, 3, 64, 64)
+INFO     00:47:17     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -2421,8 +2413,16 @@ INFO     17:43:48     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:43:48     [Failed] RandomAttack(seed=624, device=cpu)
-killed
+INFO     00:47:17     RandomAttack(seed=735, device=cpu)
+INFO     00:47:17     PGDAttack(seed=435, device=cpu)
+INFO     00:47:17     [!] Iterations: 0
+INFO     00:47:17     adv (first 5): tensor([57.0656, 53.5056, 42.6448, 48.8604, 66.0788])
+DEBUG    00:47:17     output: tensor([  20.,   14.,  -44.,   98.,  -18.,   32.,   -6.,  -34.,  -70.,   32.,
+         -24., -170.,   30.,  146.,   34.,  -60.,  -72.,   68.,   70.,   18.,
+         -26.,    2.,    4.,  -62.,  -10.,  -12.,   74., -112.,  -10.,  -16.,
+         -70.,  110.,   30.,   40.,  -56.,    4.,  -20.,   24.,   12.,   26.,
+           2.,  -32.,  -76.])
+sat,2.4581
 
 onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -2441,7 +2441,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:47:31     [!] VNNLIB: 12288 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_4/quant_conv2d_12/QuantConv2D__103:0): Transpose()
   (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
@@ -2473,9 +2475,8 @@ ConvertModel(
   (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
   (Softmax_activation_4): Identity()
 )
-INFO     17:44:07     [!] VNNLIB: 12288 inputs, 43 outputs
-INFO     17:44:09     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
-INFO     17:44:09     [!] Output shape: (1, 43)
+INFO     00:47:33     [!] Input shape: (1, 3, 64, 64)
+INFO     00:47:33     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -2485,8 +2486,16 @@ INFO     17:44:09     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:44:10     [Failed] RandomAttack(seed=827, device=cpu)
-killed
+INFO     00:47:33     RandomAttack(seed=915, device=cpu)
+INFO     00:47:33     PGDAttack(seed=177, device=cpu)
+INFO     00:47:33     [!] Iterations: 0
+INFO     00:47:33     adv (first 5): tensor([194.4495, 200.9862, 214.3318, 192.4208, 202.6192])
+DEBUG    00:47:33     output: tensor([ -66.,   44.,   46.,  132., -104.,   62.,  -16.,  -64., -128.,   54.,
+         -58.,  -60.,  -88.,   32.,  -96.,  -22.,  -78.,   34.,  116.,   16.,
+         -64.,  -32.,  -18.,  -56.,  -32.,   46.,  -88.,  -30.,  116.,   30.,
+         -32.,   84.,   48.,   38.,   66.,   26.,   34.,  -34.,   38.,  -40.,
+          32.,  -26.,  -74.])
+sat,2.4406
 
 onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -2505,7 +2514,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:47:47     [!] VNNLIB: 12288 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_4/quant_conv2d_12/QuantConv2D__103:0): Transpose()
   (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
@@ -2537,9 +2548,8 @@ ConvertModel(
   (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
   (Softmax_activation_4): Identity()
 )
-INFO     17:44:29     [!] VNNLIB: 12288 inputs, 43 outputs
-INFO     17:44:31     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
-INFO     17:44:31     [!] Output shape: (1, 43)
+INFO     00:47:49     [!] Input shape: (1, 3, 64, 64)
+INFO     00:47:49     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -2549,8 +2559,16 @@ INFO     17:44:31     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:44:31     [Failed] RandomAttack(seed=692, device=cpu)
-killed
+INFO     00:47:49     RandomAttack(seed=105, device=cpu)
+INFO     00:47:49     PGDAttack(seed=899, device=cpu)
+INFO     00:47:49     [!] Iterations: 0
+INFO     00:47:49     adv (first 5): tensor([191.2028, 199.0962, 217.7188, 195.2360, 203.8884])
+DEBUG    00:47:49     output: tensor([ -54.,   36.,   10.,  100.,  -40.,   26.,  -52.,  -48., -136.,   50.,
+         -74.,  -52.,  -76.,   36.,  -68.,  -62.,  -66.,   42.,  168.,   76.,
+        -108.,  -52.,  -10.,  -76.,   -8.,   78.,  -20.,  -18.,   52.,   -6.,
+         -24.,   92.,   36.,   14.,   34.,  -14.,   34.,    2.,   34.,  -36.,
+          40.,   -2.,  -86.])
+sat,2.3902
 
 onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -2569,7 +2587,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:48:02     [!] VNNLIB: 12288 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_4/quant_conv2d_12/QuantConv2D__103:0): Transpose()
   (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
@@ -2601,9 +2621,8 @@ ConvertModel(
   (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
   (Softmax_activation_4): Identity()
 )
-INFO     17:44:51     [!] VNNLIB: 12288 inputs, 43 outputs
-INFO     17:44:53     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
-INFO     17:44:53     [!] Output shape: (1, 43)
+INFO     00:48:04     [!] Input shape: (1, 3, 64, 64)
+INFO     00:48:04     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -2613,8 +2632,16 @@ INFO     17:44:53     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:44:53     [Failed] RandomAttack(seed=911, device=cpu)
-killed
+INFO     00:48:05     RandomAttack(seed=183, device=cpu)
+INFO     00:48:05     PGDAttack(seed=110, device=cpu)
+INFO     00:48:05     [!] Iterations: 0
+INFO     00:48:05     adv (first 5): tensor([196.1107, 196.9044, 215.6458, 195.9939, 198.5078])
+DEBUG    00:48:05     output: tensor([  -4.,   38.,   28.,   66., -110.,   48.,  -18.,  -82., -170.,   48.,
+         -16.,  -58.,  -70.,   62., -138.,  -80.,  -84.,    8.,  106.,   74.,
+         -10.,   30.,  -24.,  -14.,   22.,   88.,  -46.,  -40.,   86.,    8.,
+         -18.,   94.,   66.,   36.,    4.,   -4.,   44.,    0.,   40.,  -14.,
+          38.,  -12.,  -44.])
+sat,2.3903
 
 onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -2633,7 +2660,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:48:18     [!] VNNLIB: 12288 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_4/quant_conv2d_12/QuantConv2D__103:0): Transpose()
   (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
@@ -2665,9 +2694,8 @@ ConvertModel(
   (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
   (Softmax_activation_4): Identity()
 )
-INFO     17:45:14     [!] VNNLIB: 12288 inputs, 43 outputs
-INFO     17:45:16     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
-INFO     17:45:16     [!] Output shape: (1, 43)
+INFO     00:48:20     [!] Input shape: (1, 3, 64, 64)
+INFO     00:48:20     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -2677,8 +2705,16 @@ INFO     17:45:16     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:45:16     [Failed] RandomAttack(seed=535, device=cpu)
-killed
+INFO     00:48:20     RandomAttack(seed=111, device=cpu)
+INFO     00:48:20     PGDAttack(seed=847, device=cpu)
+INFO     00:48:20     [!] Iterations: 0
+INFO     00:48:20     adv (first 5): tensor([188.1203, 207.1314, 213.7679, 191.3806, 195.7948])
+DEBUG    00:48:20     output: tensor([  -2.,   52.,   18.,   96.,  -48.,   22.,  -32.,  -80., -156.,    2.,
+        -110.,  -80.,  -60.,    4.,  -76.,  -26.,  -58.,   46.,  164.,   72.,
+         -84.,  -32.,  -30., -116.,   44.,   22.,  -40.,  -10.,   84.,   30.,
+         -32.,   60.,   72.,    6.,   82.,   10.,   50.,  -10.,   22.,  -36.,
+          16.,  -46.,  -50.])
+sat,2.3945
 
 onnx/3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,Restricted license - for non-production use only - expires 2025-11-24
 Automatic inference of operator: sign
@@ -2697,7 +2733,9 @@ Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
 Automatic inference of operator: sign
+INFO     00:48:34     [!] VNNLIB: 12288 inputs, 43 outputs
 ConvertModel(
+  (Transpose_sequential_4/quant_conv2d_12/QuantConv2D__103:0): Transpose()
   (Conv_sequential_4/quant_conv2d_12/QuantConv2D:0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), bias=False)
   (MaxPool_sequential_4/max_pooling2d_12/MaxPool:0): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
   (BatchNormalization_sequential_4/batch_normalization_15/FusedBatchNormV3:0): BatchNormWrapper(
@@ -2729,9 +2767,8 @@ ConvertModel(
   (MatMul_sequential_4/quant_dense_8/MatMul:0): Linear(in_features=1024, out_features=43, bias=False)
   (Softmax_activation_4): Identity()
 )
-INFO     17:45:36     [!] VNNLIB: 12288 inputs, 43 outputs
-INFO     17:45:38     [!] Input shape: (1, 3, 64, 64) (is_nhwc=True)
-INFO     17:45:38     [!] Output shape: (1, 43)
+INFO     00:48:36     [!] Input shape: (1, 3, 64, 64)
+INFO     00:48:36     [!] Output shape: (1, 43)
 
 [!] Current settings:
 	- max_hidden_branches           : 5000
@@ -2741,6 +2778,14 @@ INFO     17:45:38     [!] Output shape: (1, 43)
 	- use_stabilize                 : True
 
 
-INFO     17:45:39     [Failed] RandomAttack(seed=904, device=cpu)
-killed 
+INFO     00:48:36     RandomAttack(seed=969, device=cpu)
+INFO     00:48:36     PGDAttack(seed=387, device=cpu)
+INFO     00:48:36     [!] Iterations: 0
+INFO     00:48:36     adv (first 5): tensor([195.4133, 203.5356, 206.9505, 207.7711, 202.2868])
+DEBUG    00:48:36     output: tensor([  10.,   64.,   26.,  168., -108.,   18.,  -16.,  -80., -136.,   46.,
+         -46.,  -40.,  -52.,   56.,  -92.,  -74.,  -66.,   46.,  116.,   28.,
+         -64.,  -48.,  -62.,  -84.,  -28.,   42.,  -48.,  -34.,   80.,  -10.,
+         -40.,   84.,   80.,   -2.,   50.,   34.,   50.,   10.,   34.,  -24.,
+          -4.,    2.,  -46.])
+sat,2.3547
 
